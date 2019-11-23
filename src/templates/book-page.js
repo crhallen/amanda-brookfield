@@ -86,7 +86,7 @@ export const BookPageTemplate = ({
         size="lg"
         center
         css={`
-          ${hideBelowMobile} margin-top: 48px
+          ${hideBelowMobile} margin-top: 48px;
         `}
       />
       <ReviewItemsWrapper css={!mobileReviewsVisible && hideBelowMobile}>
