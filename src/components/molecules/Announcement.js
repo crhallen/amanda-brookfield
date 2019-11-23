@@ -81,14 +81,16 @@ const ResponsiveWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  /* ${media.aboveMobile`
-
-  `} */
 `
 
 const ImageWrapper = styled.div`
-  flex: 2 0 auto;
-  width: 100px;
+  flex: 1 0 auto;
+  width: 140px;
+  max-width: 160px;
+  padding-left: 20px;
+  ${media.belowMobile`
+    display: none;
+  `}
 `
 
 const ButtonWrapper = styled.div`
@@ -115,7 +117,7 @@ export const AnnouncementTemplate = ({
           <RobotoCapsTitle>{title}</RobotoCapsTitle>
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
-            <div style={{flex: '1 0 auto'}}>
+            <div>
               <StyledContent>
                 <AnnouncementContent content={content} />
               </StyledContent>
@@ -134,9 +136,11 @@ export const AnnouncementTemplate = ({
                 </ButtonWrapper>
               )}
             </div>
-            <ImageWrapper>
-              <PreviewCompatibleImg imageInfo={image} />
-            </ImageWrapper>
+            {image && (
+              <ImageWrapper>
+                <PreviewCompatibleImg imageInfo={image} />
+              </ImageWrapper>
+            )}
           </ResponsiveWrapper>
         </div>
       </AnnouncementContainer>
