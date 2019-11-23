@@ -79,18 +79,17 @@ const CloseIcon = styled(Img)`
 const ResponsiveWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  ${media.aboveMobile`
-    flex-direction: row;
-  `}
+  flex-direction: row;
+  /* ${media.aboveMobile`
+
+  `} */
 `
+
+const ImageWrapper = styled.div``
 
 const ButtonWrapper = styled.div`
   align-self: center;
   margin: 24px 0 0;
-  ${media.aboveMobile`
-    margin: 16px 16px 16px 32px;
-  `}
 `
 
 export const AnnouncementTemplate = ({
@@ -107,28 +106,29 @@ export const AnnouncementTemplate = ({
     <BackDrop>
       <AnnouncementContainer isDisabled={isDisabled}>
         <div css="position: relative;">
+          <RobotoCapsTitle>{title}</RobotoCapsTitle>
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
             <div>
-              <RobotoCapsTitle>{title}</RobotoCapsTitle>
               <StyledContent>
                 <AnnouncementContent content={content} />
               </StyledContent>
+              {buttonLink && buttonText && (
+                <ButtonWrapper onClick={hide}>
+                  <SketchButton
+                    as={buttonLink.startsWith('/') ? Link : ExternalLink}
+                    //TODO - fix this clash
+                    to={buttonLink}
+                    href={buttonLink}
+                    styleType="blue"
+                    uppercase
+                  >
+                    {buttonText}
+                  </SketchButton>
+                </ButtonWrapper>
+              )}
             </div>
-            {buttonLink && buttonText && (
-              <ButtonWrapper onClick={hide}>
-                <SketchButton
-                  as={buttonLink.startsWith('/') ? Link : ExternalLink}
-                  //TODO - fix this clash
-                  to={buttonLink}
-                  href={buttonLink}
-                  styleType="blue"
-                  uppercase
-                >
-                  {buttonText}
-                </SketchButton>
-              </ButtonWrapper>
-            )}
+            <ImageWrapper>image ehre</ImageWrapper>
           </ResponsiveWrapper>
         </div>
       </AnnouncementContainer>
