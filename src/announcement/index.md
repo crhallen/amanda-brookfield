@@ -6,7 +6,6 @@ image: /img/people-s-book-prize.jpg
 displayUntil: ''
 isDisabled: false
 ---
-
 My new novel, 'Good Girls', is getting five star reviews:
 
 _"The depth - the beauty - of this evocative story is almost too difficult to encapsulate."_
