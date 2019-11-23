@@ -1,11 +1,12 @@
 ---
 title: The Big News
-buttonText: BUY NOW
-buttonLink: 'https://www.amazon.co.uk/Good-Girls-Amanda-Brookfield-ebook/dp/B07V2XF69J'
+buttonText: VOTE NOW
+buttonLink: 'https://peoplesbookprize.com/winter-2019/good-girls'
 displayUntil: ''
 isDisabled: false
 ---
-My new novel, 'Good Girls', is getting five star reviews: 
+
+My new novel, 'Good Girls', is getting five star reviews:
 
 _"The depth - the beauty - of this evocative story is almost too difficult to encapsulate."_
 
