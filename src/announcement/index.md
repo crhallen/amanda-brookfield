@@ -2,6 +2,7 @@
 title: The Big News
 buttonText: VOTE NOW
 buttonLink: 'https://peoplesbookprize.com/winter-2019/good-girls'
+image: /img/the-good-girls_final.jpg
 displayUntil: ''
 isDisabled: false
 ---
