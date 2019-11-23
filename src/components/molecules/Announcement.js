@@ -3,6 +3,7 @@ import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
 import {parseISO, isValid} from 'date-fns'
 
+import PreviewCompatibleImg from '../PreviewCompatibleImage'
 import Link from '../atoms/Link'
 import ExternalLink from '../atoms/ExternalLink'
 import Container from '../atoms/Container'
@@ -85,7 +86,10 @@ const ResponsiveWrapper = styled.div`
   `} */
 `
 
-const ImageWrapper = styled.div``
+const ImageWrapper = styled.div`
+  flex: 2 0 auto;
+  width: 100px;
+`
 
 const ButtonWrapper = styled.div`
   align-self: center;
@@ -100,8 +104,10 @@ export const AnnouncementTemplate = ({
   buttonText,
   contentComponent,
   isDisabled = false, //this prop is just for cms
+  image,
 }) => {
   const AnnouncementContent = contentComponent || Content
+
   return (
     <BackDrop>
       <AnnouncementContainer isDisabled={isDisabled}>
@@ -109,7 +115,7 @@ export const AnnouncementTemplate = ({
           <RobotoCapsTitle>{title}</RobotoCapsTitle>
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
-            <div>
+            <div style={{flex: '1 0 auto'}}>
               <StyledContent>
                 <AnnouncementContent content={content} />
               </StyledContent>
@@ -128,7 +134,9 @@ export const AnnouncementTemplate = ({
                 </ButtonWrapper>
               )}
             </div>
-            <ImageWrapper>image ehre</ImageWrapper>
+            <ImageWrapper>
+              <PreviewCompatibleImg imageInfo={image} />
+            </ImageWrapper>
           </ResponsiveWrapper>
         </div>
       </AnnouncementContainer>
@@ -160,6 +168,13 @@ const Announcement = () => {
                 buttonText
                 isDisabled
                 displayUntil
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 276) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
@@ -169,7 +184,14 @@ const Announcement = () => {
   )
   const {
     html,
-    frontmatter: {title, buttonLink, buttonText, isDisabled, displayUntil},
+    frontmatter: {
+      title,
+      buttonLink,
+      buttonText,
+      isDisabled,
+      displayUntil,
+      image,
+    },
   } = announcement
 
   const [isClosed, setClosed] = useState(true)
@@ -216,6 +238,7 @@ const Announcement = () => {
       buttonLink={buttonLink}
       buttonText={buttonText}
       contentComponent={HTMLContent}
+      image={image}
     />
   )
 }

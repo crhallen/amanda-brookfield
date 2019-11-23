@@ -50,6 +50,13 @@ collections:
               default: '',
             }
           - {
+              label: Image,
+              name: image,
+              widget: image,
+              required: false,
+              media_library: {config: {multiple: false}},
+            }
+          - {
               label: Display Until,
               name: displayUntil,
               widget: datetime,
