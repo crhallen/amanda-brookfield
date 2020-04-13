@@ -2893,6 +2893,7 @@ __metadata:
     dotenv: ^8.2.0
     eslint: ^6.8.0
     eslint-config-prettier: ^6.10.1
+    eslint-import-resolver-node: ^0.3.3
     eslint-plugin-import: ^2.20.2
     eslint-plugin-react: ^7.19.0
     gatsby: ^2.20.18
@@ -7239,7 +7240,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-node@npm:^0.3.2":
+"eslint-import-resolver-node@npm:^0.3.2, eslint-import-resolver-node@npm:^0.3.3":
   version: 0.3.3
   resolution: "eslint-import-resolver-node@npm:0.3.3"
   dependencies:
