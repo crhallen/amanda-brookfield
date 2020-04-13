@@ -1,6 +1,7 @@
 node_modules
 .cache
 .yarn
+.pnp.js
 coverage
 dist
 build
