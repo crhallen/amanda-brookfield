@@ -3,3 +3,4 @@
   command = "yarn run build && yarn run build-functions"
   functions = "./built-lambda"
 [build.environment]
+  YARN_FLAGS = "--immutable --immutable-cache"
