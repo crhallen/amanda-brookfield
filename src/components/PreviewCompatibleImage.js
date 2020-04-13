@@ -28,9 +28,7 @@ const ImgFluidOrFixed = ({style, childImageSharp, alt, className}) => {
   return null
 }
 
-const PreviewCompatibleImage = props => {
-  console.log(props)
-  const {imageInfo, style, className} = props
+const PreviewCompatibleImage = ({imageInfo, style, className}) => {
   if (!imageInfo) {
     return null
   }
