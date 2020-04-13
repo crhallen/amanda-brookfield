@@ -62,10 +62,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.12.0"
       ],
       [
-        "dotenv",
-        "npm:8.2.0"
-      ],
-      [
         "eslint",
         "npm:6.8.0"
       ],
@@ -222,10 +218,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.1.3"
       ],
       [
-        "twitter",
-        "npm:1.7.1"
-      ],
-      [
         "uuid",
         "npm:7.0.3"
       ]
@@ -245,7 +237,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-eslint", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:10.1.0"],
             ["babel-plugin-styled-components", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:1.10.7"],
             ["date-fns", "npm:2.12.0"],
-            ["dotenv", "npm:8.2.0"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-prettier", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.10.1"],
             ["eslint-import-resolver-node", "npm:0.3.3"],
@@ -285,7 +276,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["styled-components", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:5.1.0"],
             ["styled-normalize", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:8.0.7"],
             ["titlecase", "npm:1.1.3"],
-            ["twitter", "npm:1.7.1"],
             ["uuid", "npm:7.0.3"]
           ],
           "linkType": "SOFT",
@@ -3700,7 +3690,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-eslint", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:10.1.0"],
             ["babel-plugin-styled-components", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:1.10.7"],
             ["date-fns", "npm:2.12.0"],
-            ["dotenv", "npm:8.2.0"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-prettier", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.10.1"],
             ["eslint-import-resolver-node", "npm:0.3.3"],
@@ -3740,7 +3729,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["styled-components", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:5.1.0"],
             ["styled-normalize", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:8.0.7"],
             ["titlecase", "npm:1.1.3"],
-            ["twitter", "npm:1.7.1"],
             ["uuid", "npm:7.0.3"]
           ],
           "linkType": "SOFT",
@@ -7480,13 +7468,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["deep-extend", [
-        ["npm:0.5.1", {
-          "packageLocation": "./.yarn/cache/deep-extend-npm-0.5.1-b353334103-2.zip/node_modules/deep-extend/",
-          "packageDependencies": [
-            ["deep-extend", "npm:0.5.1"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:0.6.0", {
           "packageLocation": "./.yarn/cache/deep-extend-npm-0.6.0-e182924219-2.zip/node_modules/deep-extend/",
           "packageDependencies": [
@@ -23487,17 +23468,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tweetnacl-npm-0.14.5-a3f766c0d1-2.zip/node_modules/tweetnacl/",
           "packageDependencies": [
             ["tweetnacl", "npm:0.14.5"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["twitter", [
-        ["npm:1.7.1", {
-          "packageLocation": "./.yarn/cache/twitter-npm-1.7.1-218532ebf8-2.zip/node_modules/twitter/",
-          "packageDependencies": [
-            ["twitter", "npm:1.7.1"],
-            ["deep-extend", "npm:0.5.1"],
-            ["request", "npm:2.88.2"]
           ],
           "linkType": "HARD",
         }]
