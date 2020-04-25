@@ -9,9 +9,9 @@ const ArticleList = ({title, items, readMoreText}) => (
     {title && (
       <H2
         css={`
-          margin: 72px 0 48px;
+          margin: 0 0 48px;
           ${media.aboveMobile`
-          margin-bottom: 72px;
+            margin-bottom: 72px;
         `}
         `}
       >

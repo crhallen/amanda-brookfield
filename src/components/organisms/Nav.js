@@ -112,7 +112,7 @@ const NavLinks = [
   {to: '/books', name: 'books', text: 'Books'},
   {to: '/author', name: 'author', text: 'Author'},
   {to: '/blog', name: 'blog', text: 'Blog'},
-  {to: '/paper', name: 'paper', text: 'Articles'},
+  {to: '/features', name: 'features', text: 'Features'},
   {to: '/events', name: 'events', text: 'Events'},
 ]
 
@@ -124,6 +124,7 @@ const NavItem = ({text, to, name, handleClick = () => null}) => (
         const {isCurrent, isPartiallyCurrent, href, location} = props
         return isCurrent ||
           (href !== '/' && isPartiallyCurrent) ||
+          // TODO remove this
           (href === '/books' && location.pathname.startsWith('/articles')) ||
           (href === '/books' && location.pathname.startsWith('/short-stories'))
           ? {className: 'active'}

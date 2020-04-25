@@ -8,8 +8,6 @@ import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 import Container from '../../components/atoms/Container'
 import media from '../../styles/mediaQueries'
 import Page from '../../components/atoms/Page'
-import ArticleList from '../../components/molecules/ArticleList'
-import ArticleSection from '../../components/molecules/ArticleSection'
 
 import HelmetHelper from '../../components/molecules/HelmetHelper'
 
@@ -32,8 +30,7 @@ const BooksWrapper = styled.section`
 
 const BooksPage = ({data}) => {
   const {
-    allMarkdownRemarkArticles: {edges: articles},
-    allMarkdownRemarkBooks: {edges: books},
+    allMarkdownRemark: {edges: books},
   } = data
   return (
     <Page>
@@ -54,22 +51,6 @@ const BooksPage = ({data}) => {
             />
           ))}
         </BooksWrapper>
-        <ArticleSection>
-          <ArticleList
-            title="Articles"
-            readMoreText="Read full article >"
-            items={articles.filter(
-              ({node}) => node.frontmatter.articleType === 'article',
-            )}
-          />
-          <ArticleList
-            title="Short Stories"
-            readMoreText="Read full short story >"
-            items={articles.filter(
-              ({node}) => node.frontmatter.articleType === 'short-story',
-            )}
-          />
-        </ArticleSection>
       </Container>
     </Page>
   )
@@ -83,27 +64,7 @@ export default BooksPage
 
 export const pageQuery = graphql`
   query BooksPageQuery {
-    allMarkdownRemarkArticles: allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
-      filter: {frontmatter: {templateKey: {in: ["article-page"]}}}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 200)
-          id
-          fields {
-            slug
-          }
-          timeToRead
-          frontmatter {
-            title
-            templateKey
-            articleType
-          }
-        }
-      }
-    }
-    allMarkdownRemarkBooks: allMarkdownRemark(
+    allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___originalPublicationDate]}
       filter: {frontmatter: {templateKey: {in: ["book-page"]}}}
     ) {
