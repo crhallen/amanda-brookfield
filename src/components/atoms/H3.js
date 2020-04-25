@@ -12,7 +12,7 @@ export const h3Mixin = css`
 const H3 = styled.h3`
   ${h3Mixin}
   ${({center}) => center && 'text-align: center;'}
-  ${({margin = false}) => `margin: ${margin ? '48px 0 24px' : '0'};`}
+  ${({margin = false}) => !margin && 'margin: 0;'}
 `
 
 export default H3

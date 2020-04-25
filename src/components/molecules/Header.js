@@ -37,6 +37,7 @@ const SubTitle = styled.h2`
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 1.6;
+  margin: 0;
 `
 
 const Header = () => {
