@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile_Landing_v1" transform="translate(-167.000000, -3605.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="375" height="3719"></rect>
+            <rect id="Rectangle-Copy-9" fill="#EFF1F3" fill-rule="nonzero" x="-1" y="3369" width="375" height="350"></rect>
+            <g id="Group-23" transform="translate(113.000000, 3605.000000)">
+                <rect id="Rectangle-Copy-29" fill-rule="nonzero" x="52" y="0" width="44" height="44"></rect>
+                <g id="Group-16" transform="translate(71.000000, 13.000000)" fill="#26282A">
+                    <path d="M7.47538686,20.9744234 L7.47538686,11.7882044 L10.5587737,11.7882044 L11.0205547,8.208 L7.47538686,8.208 L7.47538686,5.92239416 C7.47538686,4.88566423 7.76286131,4.17950365 9.24945985,4.17950365 L11.1452847,4.17880292 L11.1452847,0.976467153 C10.8171679,0.93319708 9.69214599,0.83579562 8.38248175,0.83579562 C5.64963504,0.83579562 3.77816058,2.50388321 3.77816058,5.568 L3.77816058,8.208 L0.686890511,8.208 L0.686890511,11.7882044 L3.77816058,11.7882044 L3.77816058,20.9744234 L7.47538686,20.9744234" id="Fill-837"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

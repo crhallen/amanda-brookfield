@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="162px" height="58px" viewBox="0 0 162 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>orange_button_hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M172.382937,1528.03275 C177.131257,1526.51022 210.258479,1524.45059 234.419769,1524.45059 C258.581059,1524.45059 314.382366,1522.92806 316.643064,1525.48041 C318.903762,1528.03275 320.658152,1543.64937 319.780957,1551.1098 C318.903762,1558.57023 322.91885,1568.73266 319.780957,1569.76248 C316.643064,1570.79229 253.35815,1570.79229 237.722365,1570.79229 C222.08658,1570.79229 176.649349,1573.50963 172.382937,1570.79229 C168.116524,1568.07495 167.634616,1529.55528 172.382937,1528.03275 Z" id="path-1"></path>
+        <filter x="-5.3%" y="-12.3%" width="110.5%" height="133.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_Landing_v2" transform="translate(-164.000000, -1521.000000)" fill-rule="nonzero">
+            <g id="orange_button_hover">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#FFFFFF" stroke-width="2" fill="#DA5A33" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
