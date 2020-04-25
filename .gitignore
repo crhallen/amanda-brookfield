@@ -1,12 +1,19 @@
 # Project dependencies
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 .cache/
-# Build directory
+package-lock.json
+
+# yarn with zero installs - https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+
+# Build directories
 public/
 static/admin/*.bundle.*
 .DS_Store
-yarn-error.log
 built-lambda
 
+# Environmnet variables
 .env
