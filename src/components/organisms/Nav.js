@@ -121,12 +121,8 @@ const NavItem = ({text, to, name, handleClick = () => null}) => (
     <Link
       to={to}
       getProps={props => {
-        const {isCurrent, isPartiallyCurrent, href, location} = props
-        return isCurrent ||
-          (href !== '/' && isPartiallyCurrent) ||
-          // TODO remove this
-          (href === '/books' && location.pathname.startsWith('/articles')) ||
-          (href === '/books' && location.pathname.startsWith('/short-stories'))
+        const {isCurrent, isPartiallyCurrent, href} = props
+        return isCurrent || (href !== '/' && isPartiallyCurrent)
           ? {className: 'active'}
           : null
       }}
