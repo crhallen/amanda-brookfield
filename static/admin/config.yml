@@ -19,8 +19,8 @@ public_folder: /img
 display_url: https://www.amandabrookfield.co.uk
 
 collections:
-  - name: pages-and-announcements
-    label: Pages & Announcements
+  - name: home-and-announcement
+    label: Home & Announcement
     delete: false
     files:
       - file: src/pages/index.md
@@ -184,6 +184,126 @@ collections:
               default: '',
             }
           - {label: Disable Announcement?, name: isDisabled, widget: boolean}
+  - name: books
+    label: Books
+    delete: false
+    folder: src/pages/books
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: book-page,
+        }
+      - {label: Book ID, name: bookId, widget: hidden}
+      - {label: Path, name: path, widget: hidden}
+      - {label: Title, name: title, widget: string}
+      - {
+          label: Original Publication Date,
+          name: originalPublicationDate,
+          widget: datetime,
+          timeFormat: false,
+          dateFormat: DD MMM YYYY,
+        }
+      - {label: Cover Image, name: coverImage, widget: hidden}
+      - {label: Cover Sketch Image, name: coverSketchImage, widget: hidden}
+      - {label: Amazon Link, name: amazonLink, widget: string}
+      - {label: Body, name: body, widget: markdown}
+      - {
+          label: Reviews,
+          name: reviews,
+          widget: list,
+          fields:
+            [
+              {label: Text, name: text, widget: text},
+              {label: Reviewer, name: reviewer, widget: string},
+            ],
+        }
+  - name: blog
+    label: Blog Posts
+    folder: src/pages/blog
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: blog-post,
+        }
+      - {label: Title, name: title, widget: string}
+      - {
+          label: Publish Date,
+          name: date,
+          widget: datetime,
+          timeFormat: false,
+          dateFormat: DD MMM YYYY,
+        }
+      - {label: Body, name: body, widget: markdown}
+      - {label: Tags, name: tags, widget: list, required: false}
+  - name: articles
+    label: Articles
+    folder: src/pages/features/articles
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: article-page,
+        }
+      - {
+          label: Article Type,
+          name: articleType,
+          widget: hidden,
+          default: article,
+        }
+      - {label: Title, name: title, widget: string}
+      - {
+          label: Original Publication Date,
+          name: date,
+          widget: datetime,
+          timeFormat: false,
+          dateFormat: DD MMM YYYY,
+          required: false,
+          default: '',
+        }
+      - {label: Body, name: body, widget: markdown}
+  - name: short-stories
+    label: Short Stories
+    folder: src/pages/features/short-stories
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: article-page,
+        }
+      - {
+          label: Article Type,
+          name: articleType,
+          widget: hidden,
+          default: short-story,
+        }
+      - {label: Title, name: title, widget: string}
+      - {
+          label: Original Publication Date,
+          name: date,
+          widget: datetime,
+          timeFormat: false,
+          dateFormat: DD MMM YYYY,
+          required: false,
+          default: '',
+        }
+      - {label: Body, name: body, widget: markdown}
+  - name: events
+    label: Events
+    delete: false
+    files:
       - file: src/pages/events/index.md
         label: Events
         name: events
@@ -204,7 +324,8 @@ collections:
                   {
                     label: Event Date,
                     name: date,
-                    widget: date,
+                    widget: datetime,
+                    timeFormat: false,
                     dateFormat: DD MMM YYYY,
                   },
                   {
@@ -223,110 +344,3 @@ collections:
                   },
                 ],
             }
-  - name: blog
-    label: Blog Posts
-    folder: src/pages/blog
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: blog-post,
-        }
-      - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: date, dateFormat: DD MMM YYYY}
-      - {label: Body, name: body, widget: markdown}
-      - {label: Tags, name: tags, widget: list, required: false}
-  - name: articles
-    label: Articles
-    folder: src/pages/articles
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: article-page,
-        }
-      - {
-          label: Article Type,
-          name: articleType,
-          widget: hidden,
-          default: article,
-        }
-      - {label: Title, name: title, widget: string}
-      - {
-          label: Original Publication Date,
-          name: date,
-          widget: date,
-          dateFormat: DD MMM YYYY,
-          required: false,
-          default: '',
-        }
-      - {label: Body, name: body, widget: markdown}
-  - name: short-stories
-    label: Short Stories
-    folder: src/pages/short-stories
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: article-page,
-        }
-      - {
-          label: Article Type,
-          name: articleType,
-          widget: hidden,
-          default: short-story,
-        }
-      - {label: Title, name: title, widget: string}
-      - {
-          label: Original Publication Date,
-          name: date,
-          widget: date, # todo -replace date with datetime as date is being deprecated
-          dateFormat: DD MMM YYYY,
-          required: false,
-          default: '',
-        }
-      - {label: Body, name: body, widget: markdown}
-  - name: books
-    label: Books
-    delete: false
-    folder: src/pages/books
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: book-page,
-        }
-      - {label: Book ID, name: bookId, widget: hidden}
-      - {label: Path, name: path, widget: hidden}
-      - {label: Title, name: title, widget: string}
-      - {
-          label: Original Publication Date,
-          name: originalPublicationDate,
-          widget: date,
-          dateFormat: DD MMM YYYY,
-        }
-      - {label: Cover Image, name: coverImage, widget: hidden}
-      - {label: Cover Sketch Image, name: coverSketchImage, widget: hidden}
-      - {label: Amazon Link, name: amazonLink, widget: string}
-      - {label: Body, name: body, widget: markdown}
-      - {
-          label: Reviews,
-          name: reviews,
-          widget: list,
-          fields:
-            [
-              {label: Text, name: text, widget: text},
-              {label: Reviewer, name: reviewer, widget: string},
-            ],
-        }
