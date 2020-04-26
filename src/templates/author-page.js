@@ -20,7 +20,7 @@ export const AuthorPageTemplate = ({content, contentComponent}) => {
     <Page>
       <HelmetHelper
         title="Author"
-        metaDescription="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’"
+        metaDescription="Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips."
       />
       <Container narrow>
         <MobileSketchHeading title="Author" sketchType="author" />
@@ -67,11 +67,9 @@ export const authorPageQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       id
       html
-      # frontmatter {
-      #   date(formatString: "MMMM DD, YYYY")
-      #   title
-      #   description
-      # }
+      frontmatter {
+        title
+      }
     }
   }
 `
