@@ -6,9 +6,14 @@ import Content, {HTMLContent} from '../components/Content'
 import Page from '../components/atoms/Page'
 import Container from '../components/atoms/Container'
 import HelmetHelper from '../components/molecules/HelmetHelper'
+import AuthorNavItem from '../components/molecules/AuthorNavItem'
+
+//TODO make images vary
+import bioImg2x from '../img/bio-desktop@2x.jpg'
+import inspImg2x from '../img/inspiration-desktop@2x.jpg'
 
 export const AuthorPageTemplate = ({content, contentComponent}) => {
-  const ItemContent = contentComponent || Content
+  const AuthorContent = contentComponent || Content
 
   return (
     <Page>
@@ -17,7 +22,19 @@ export const AuthorPageTemplate = ({content, contentComponent}) => {
         metaDescription="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’"
       />
       <Container narrow>
-        <ItemContent content={content} />
+        <div css={'display: flex; margin: 0 -12px;'}>
+          <AuthorNavItem
+            to="/author/inspiration"
+            title="Inspiration"
+            img={inspImg2x}
+          />
+          <AuthorNavItem
+            to="/author/biography"
+            title="Biography"
+            img={bioImg2x}
+          />
+        </div>
+        <AuthorContent content={content} />
       </Container>
     </Page>
   )
@@ -31,7 +48,9 @@ const AuthorPage = ({data}) => {
   const {markdownRemark: post} = data
 
   return (
-    <AuthorPageTemplate content={post.html} contentComponent={HTMLContent} />
+    <>
+      <AuthorPageTemplate content={post.html} contentComponent={HTMLContent} />
+    </>
   )
 }
 

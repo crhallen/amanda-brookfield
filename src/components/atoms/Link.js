@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link as GatsbyLink} from 'gatsby'
 
-const LinkWithRestrictedProps = ({to, className, children}) => {
+// Restrict Link props that are passed through to avoid errors
+const Link = ({to, className, children}) => {
   if (!to) {
     return children
   }
@@ -12,4 +13,4 @@ const LinkWithRestrictedProps = ({to, className, children}) => {
   )
 }
 
-export default LinkWithRestrictedProps
+export default Link
