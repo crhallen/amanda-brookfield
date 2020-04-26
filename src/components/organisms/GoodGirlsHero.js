@@ -154,7 +154,9 @@ export default function GoodGirlsHero({
       <HeroContainer>
         <MainSection>
           <RobotoCapsTitle>NEW</RobotoCapsTitle>
-          <H2 css={'text-align: left; margin: 20px 0 16px;'}>{title}</H2>
+          <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
+            {title}
+          </H2>
           <BlurbBody>{text}</BlurbBody>
           <BuyNowButton styleType="blue" href={buyUrl} size="md" />
           <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>

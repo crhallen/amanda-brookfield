@@ -8,6 +8,7 @@ import Container from '../components/atoms/Container'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 import AuthorNavItem from '../components/molecules/AuthorNavItem'
 import MobileSketchHeading from '../components/molecules/MobileSketchHeading'
+import StyledMarkdown from '../components/atoms/StyledMarkdown'
 
 //TODO make images vary
 import bioImg2x from '../img/bio-desktop@2x.jpg'
@@ -36,7 +37,9 @@ export const AuthorPageTemplate = ({content, contentComponent}) => {
             img={bioImg2x}
           />
         </div>
-        <AuthorContent content={content} />
+        <StyledMarkdown>
+          <AuthorContent content={content} />
+        </StyledMarkdown>
       </Container>
     </Page>
   )

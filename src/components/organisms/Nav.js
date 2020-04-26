@@ -80,6 +80,7 @@ const NavItemWrapper = styled.div`
 
 const NavLinkText = styled(H2)`
   /* mobile only */
+  margin: 0;
   padding: 24px 0 20px;
   border-bottom: solid 1px ${({theme}) => theme.lightGrey};
   .active & {

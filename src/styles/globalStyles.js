@@ -2,10 +2,6 @@ import {createGlobalStyle} from 'styled-components'
 import styledNormalize from 'styled-normalize'
 import fontFiles from './fonts'
 import theme from './theme'
-import {blockQuoteMixin} from '../components/atoms/BlockQuote'
-import {h2Mixin} from '../components/atoms/H2'
-import {pMixin} from '../components/atoms/P'
-import {h3Mixin} from '../components/atoms/H3'
 
 export default createGlobalStyle`
   ${styledNormalize}
@@ -83,23 +79,15 @@ export default createGlobalStyle`
   h1, h2, h3, h4, h5, p {
     margin: 0;
   }
-  h2 {
-    ${h2Mixin}
-  }
-  h3 {
-    ${h3Mixin}
-  }
   p {
-    ${pMixin}
+    line-height: ${theme.lineHeight};
+    margin-bottom: 24px;
   }
   a {
     color: ${theme.red};
     &:hover{
       color: #cc271a;
     }
-  }
-  blockquote {
-    ${blockQuoteMixin}
   }
   ul {
     margin: 24px 0;

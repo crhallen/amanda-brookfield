@@ -5,6 +5,7 @@ const AllCapsTitle = styled.h2`
   font-size: 18px;
   margin-bottom: 16px;
   text-transform: uppercase;
+  font-weight: Roboto, sans-serif;
 `
 
 export default AllCapsTitle
