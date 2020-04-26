@@ -1,10 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
+import {Link} from 'gatsby'
 
 import H2 from '../atoms/H2'
 import media from '../../styles/mediaQueries'
 import {kalamFont} from '../../styles/mixins'
-import Link from '../atoms/Link'
+import theme from '../../styles/theme'
 
 const Background = styled(Link)`
   display: block;
@@ -15,23 +16,15 @@ const Background = styled(Link)`
   margin: 12px;
   background-size: cover;
   background-position: center;
-  color: inherit;
+  background-image: url(${({img}) => img});
+  color: black;
   text-decoration: none;
   &:hover {
-    color: inherit;
+    text-decoration: underline;
+    color: black;
   }
   ${media.aboveMobile`
     height: 180px;
-  `}
-`
-
-const ReadMore = styled.div`
-  ${kalamFont};
-  letter-spacing: 2px;
-  opacity: 1;
-  transition: opacity 200ms ease-in-out;
-  ${media.aboveMobile`
-    opacity: 0;
   `}
 `
 
@@ -43,22 +36,27 @@ const Overlay = styled.div`
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.6);
-  &:hover ${ReadMore} {
-    opacity: 1;
-  }
+`
+
+const h2mods = css`
+  margin: 16px 0 8px;
+  ${kalamFont};
+  color: inherit;
 `
 
 const AuthorNavItem = ({title, to, img}) => {
   return (
     <Background
-      css={`
-        background-image: url(${img});
-      `}
+      img={img}
       to={to}
+      getProps={({isCurrent}) => {
+        return isCurrent
+          ? {style: {color: theme.red, textDecoration: 'underline'}}
+          : null
+      }}
     >
       <Overlay>
-        <H2 css={'margin: 16px 0 8px;'}>{title}</H2>
-        <ReadMore>Read More</ReadMore>
+        <H2 css={h2mods}>{title}</H2>
       </Overlay>
     </Background>
   )
