@@ -41,7 +41,7 @@ export default function Footer() {
         Email Amanda
       </SketchButton>
       <SocialMediaLinks />
-      <Copyright>&copy; Amanda Brookfield 2018</Copyright>
+      <Copyright>&copy; Amanda Brookfield 2020</Copyright>
     </FooterWrapper>
   )
 }
