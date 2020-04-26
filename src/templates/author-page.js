@@ -7,6 +7,7 @@ import Page from '../components/atoms/Page'
 import Container from '../components/atoms/Container'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 import AuthorNavItem from '../components/molecules/AuthorNavItem'
+import MobileSketchHeading from '../components/molecules/MobileSketchHeading'
 
 //TODO make images vary
 import bioImg2x from '../img/bio-desktop@2x.jpg'
@@ -22,6 +23,7 @@ export const AuthorPageTemplate = ({content, contentComponent}) => {
         metaDescription="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’"
       />
       <Container narrow>
+        <MobileSketchHeading title="Author" sketchType="author" />
         <div css={'display: flex; margin: 0 -12px;'}>
           <AuthorNavItem
             to="/author/inspiration"

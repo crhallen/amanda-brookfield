@@ -2,12 +2,13 @@ import CMS from 'netlify-cms-app'
 import {withLayout, withStyledSheets} from './wrappers'
 // import fontAwesomeCSS from '@fortawesome/fontawesome-svg-core/styles.css'
 
+import AnnouncementPreview from './preview-templates/AnnouncementPreview'
 import HomePreview from './preview-templates/HomePreview'
+import BookPreview from './preview-templates/BookPreview'
+import AuthorPreview from './preview-templates/AuthorPreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ArticlePreview from './preview-templates/ArticlePreview'
-import BookPreview from './preview-templates/BookPreview'
 import EventsPreview from './preview-templates/EventsPreview'
-import AnnouncementPreview from './preview-templates/AnnouncementPreview'
 
 CMS.registerPreviewStyle(
   'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-svg-core@1.2.25/styles.css',
@@ -15,13 +16,14 @@ CMS.registerPreviewStyle(
 // For some reason this stopped working
 // CMS.registerPreviewStyle(fontAwesomeCSS)
 
-CMS.registerPreviewTemplate('home', withLayout(HomePreview))
-CMS.registerPreviewTemplate('blog', withLayout(BlogPostPreview))
-CMS.registerPreviewTemplate('articles', withLayout(ArticlePreview))
-CMS.registerPreviewTemplate('short-stories', withLayout(ArticlePreview))
-CMS.registerPreviewTemplate('books', withLayout(BookPreview))
-CMS.registerPreviewTemplate('events', withLayout(EventsPreview))
 CMS.registerPreviewTemplate(
   'announcement',
   withStyledSheets(AnnouncementPreview),
 )
+CMS.registerPreviewTemplate('home', withLayout(HomePreview))
+CMS.registerPreviewTemplate('books', withLayout(BookPreview))
+CMS.registerPreviewTemplate('author', withLayout(AuthorPreview))
+CMS.registerPreviewTemplate('blog', withLayout(BlogPostPreview))
+CMS.registerPreviewTemplate('articles', withLayout(ArticlePreview))
+CMS.registerPreviewTemplate('short-stories', withLayout(ArticlePreview))
+CMS.registerPreviewTemplate('events', withLayout(EventsPreview))
