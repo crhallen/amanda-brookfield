@@ -1,4 +1,5 @@
 ---
+title: Inspiration
 templateKey: author-page
 ---
 

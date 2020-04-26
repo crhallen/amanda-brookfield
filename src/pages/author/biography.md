@@ -1,6 +1,6 @@
 ---
+title: Biography
 templateKey: author-page
-path: /author/biography
 ---
 
 ## Biography
