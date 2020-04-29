@@ -2908,6 +2908,7 @@ __metadata:
     gatsby-remark-images: ^3.2.2
     gatsby-remark-relative-images: ^0.3.0
     gatsby-source-filesystem: ^2.2.2
+    gatsby-source-instagram: ^0.7.0
     gatsby-transformer-remark: ^2.7.1
     gatsby-transformer-sharp: ^2.4.4
     glob: ^7.1.6
@@ -3553,7 +3554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.19.2":
+"axios@npm:^0.19.0, axios@npm:^0.19.2":
   version: 0.19.2
   resolution: "axios@npm:0.19.2"
   dependencies:
@@ -8859,6 +8860,19 @@ fsevents@~2.1.2:
   peerDependencies:
     gatsby: ^2.2.0
   checksum: 2/81f47c87e1a04e4284370548ec3c3f833612074b2135bf22e32974cbb2a5e94e48945b2f44fdd1e34dd02138158deb51c96821a0c4fc848f4cbf7b738469c892
+  languageName: node
+  linkType: hard
+
+"gatsby-source-instagram@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "gatsby-source-instagram@npm:0.7.0"
+  dependencies:
+    axios: ^0.19.0
+    cheerio: ^1.0.0-rc.3
+  peerDependencies:
+    gatsby: ">2.0.0-alpha"
+    gatsby-source-filesystem: ^2.0.27
+  checksum: 2/4b48b0595023eb290ffbb4711b10b4d2335ee83eaa2abe50851636c5c67c5e8898961830bdf88a350f77d5ccb764247a0d3cfde095e747714e39d00c61ba0938
   languageName: node
   linkType: hard
 

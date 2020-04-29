@@ -134,6 +134,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.2.2"
       ],
       [
+        "gatsby-source-instagram",
+        "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:0.7.0"
+      ],
+      [
         "gatsby-transformer-remark",
         "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.7.1"
       ],
@@ -255,6 +259,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-remark-images", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:3.2.2"],
             ["gatsby-remark-relative-images", "npm:0.3.0"],
             ["gatsby-source-filesystem", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.2.2"],
+            ["gatsby-source-instagram", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:0.7.0"],
             ["gatsby-transformer-remark", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.7.1"],
             ["gatsby-transformer-sharp", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.4.4"],
             ["glob", "npm:7.1.6"],
@@ -3708,6 +3713,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-remark-images", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:3.2.2"],
             ["gatsby-remark-relative-images", "npm:0.3.0"],
             ["gatsby-source-filesystem", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.2.2"],
+            ["gatsby-source-instagram", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:0.7.0"],
             ["gatsby-transformer-remark", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.7.1"],
             ["gatsby-transformer-sharp", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.4.4"],
             ["glob", "npm:7.1.6"],
@@ -10525,6 +10531,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "packagePeers": [
             "gatsby"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["gatsby-source-instagram", [
+        ["virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:0.7.0", {
+          "packageLocation": "./.yarn/$$virtual/gatsby-source-instagram-virtual-a5a9ab71d9/0/cache/gatsby-source-instagram-npm-0.7.0-866bdc3bed-2.zip/node_modules/gatsby-source-instagram/",
+          "packageDependencies": [
+            ["gatsby-source-instagram", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:0.7.0"],
+            ["axios", "npm:0.19.2"],
+            ["cheerio", "npm:1.0.0-rc.3"],
+            ["gatsby", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.20.18"],
+            ["gatsby-source-filesystem", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.2.2"]
+          ],
+          "packagePeers": [
+            "gatsby",
+            "gatsby-source-filesystem"
           ],
           "linkType": "HARD",
         }]
