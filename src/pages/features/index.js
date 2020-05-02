@@ -24,17 +24,17 @@ const FeaturesPage = ({data}) => {
         <MobileSketchHeading title="Features" sketchType="features" />
         <ArticleSection>
           <ArticleList
-            title="Articles"
-            readMoreText="Read full article >"
-            items={articles.filter(
-              ({node}) => node.frontmatter.articleType === 'article',
-            )}
-          />
-          <ArticleList
             title="Short Stories"
             readMoreText="Read full short story >"
             items={articles.filter(
               ({node}) => node.frontmatter.articleType === 'short-story',
+            )}
+          />
+          <ArticleList
+            title="Articles"
+            readMoreText="Read full article >"
+            items={articles.filter(
+              ({node}) => node.frontmatter.articleType === 'article',
             )}
           />
         </ArticleSection>
