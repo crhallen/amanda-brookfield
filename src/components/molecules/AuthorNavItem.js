@@ -42,6 +42,9 @@ const h2mods = css`
   margin: 16px 0 8px;
   ${kalamFont};
   color: inherit;
+  ${media.belowMobile`
+    font-size: 16px;
+  `}
 `
 
 const AuthorNavItem = ({title, to, img}) => {

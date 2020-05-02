@@ -1,12 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
+import styled from 'styled-components'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
+import ExternalLink from '../../components/atoms/ExternalLink'
 import Container from '../../components/atoms/Container'
 import Page from '../../components/atoms/Page'
 
 import HelmetHelper from '../../components/molecules/HelmetHelper'
 import AuthorHeader from '../../components/organisms/AuthorHeader'
+import H2 from '../../components/atoms/H2'
+
+const ImageLink = styled(ExternalLink)`
+  display: block;
+`
+
+const InstaLinkWrapper = styled.div`
+  text-align: center;
+  margin-bottom: 48px;
+  margin-top: 16px;
+  a {
+    text-decoration: none !important;
+  }
+  .mabel-insta-icon {
+    margin-top: 8px;
+    font-size: 32px;
+  }
+`
 
 const MabelPage = ({data}) => {
   console.log(data.allInstaNode)
@@ -21,8 +42,21 @@ const MabelPage = ({data}) => {
       />
       <AuthorHeader />
       <Container>
+        <H2 margin style={{marginBottom: 0}}>
+          Mabel
+        </H2>
+        <InstaLinkWrapper>
+          <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
+            <div>Find me on Instagram!</div>
+            <FontAwesomeIcon
+              className="mabel-insta-icon"
+              icon={['fab', 'instagram']}
+            />
+          </ExternalLink>
+        </InstaLinkWrapper>
         <div
           style={{
+            // marginTop: 72,
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
             gap: 16,
@@ -30,17 +64,22 @@ const MabelPage = ({data}) => {
         >
           {images.map(({node: image}) => (
             // <div key={image.id}>
-            <img
-              // style={{
-              //   objectFit: 'cover',
-              //   width: '100%',
-              //   height: ' 100%',
-              //   // paddingBottom: '100%',
-              // }}
+            <ImageLink
+              href={`https://www.instagram.com/p/${image.id}`}
               key={image.id}
-              x={console.log(image)}
-              src={image.original}
-            />
+            >
+              <img
+                // style={{
+                //   objectFit: 'cover',
+                //   width: '100%',
+                //   height: ' 100%',
+                //   // paddingBottom: '100%',
+                // }}
+                // key={image.id}
+                x={console.log(image)}
+                src={image.original}
+              />
+            </ImageLink>
             // </div>
           ))}
         </div>
