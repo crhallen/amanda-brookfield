@@ -52,10 +52,10 @@ const SquareImageWrapper = styled.div`
 `
 
 const MabelPage = ({data}) => {
-  console.log(data.allInstaNode)
   const {
     allInstaNode: {edges: images},
   } = data
+
   return (
     <Page>
       <HelmetHelper
