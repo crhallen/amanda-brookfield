@@ -12,7 +12,7 @@ import Page from '../../components/atoms/Page'
 import HelmetHelper from '../../components/molecules/HelmetHelper'
 import AuthorHeader from '../../components/organisms/AuthorHeader'
 import H2 from '../../components/atoms/H2'
-// import Img from '../../components/PreviewCompatibleImage'
+import Img from '../../components/PreviewCompatibleImage'
 
 const InstagramCTA = styled.div`
   ${kalamFont}
@@ -42,11 +42,10 @@ const SquareImageWrapper = styled.div`
     padding-bottom: 100%;
   }
 
-  img {
-    position: absolute;
+  & > :first-child {
+    position: absolute !important;
     top: 0;
     left: 0;
-    object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -84,7 +83,7 @@ const MabelPage = ({data}) => {
               key={image.id}
             >
               <SquareImageWrapper>
-                <img src={image.thumbnails[image.thumbnails.length - 1].src} />
+                <Img imageInfo={image.localFile} />
               </SquareImageWrapper>
             </ExternalLink>
           ))}
@@ -115,8 +114,8 @@ export const mabelPageQuery = graphql`
           caption
           localFile {
             childImageSharp {
-              fixed(width: 150, height: 150) {
-                ...GatsbyImageSharpFixed
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
