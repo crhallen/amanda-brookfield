@@ -59,12 +59,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-instagram',
-      options: {
-        username: 'amanda_and_mabel_brookfield',
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
