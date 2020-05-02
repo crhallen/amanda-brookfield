@@ -111,7 +111,7 @@ const DesktopNav = styled.nav`
 const NavLinks = [
   {to: '/', text: 'Home', name: 'books', mobileOnly: true},
   {to: '/books', name: 'books', text: 'Books'},
-  {to: '/author/inspiration', name: 'author', text: 'Author'},
+  {to: '/author', name: 'author', text: 'Author'},
   {to: '/blog', name: 'blog', text: 'Blog'},
   {to: '/features', name: 'features', text: 'Features'},
   {to: '/events', name: 'events', text: 'Events'},

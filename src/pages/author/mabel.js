@@ -1,29 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import {graphql} from 'gatsby'
 
 import Container from '../../components/atoms/Container'
 import Page from '../../components/atoms/Page'
 
 import HelmetHelper from '../../components/molecules/HelmetHelper'
-
-// const BooksWrapper = styled.section`
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-//   margin-right: -30px;
-//   > div {
-//     margin-right: 30px;
-//     margin-bottom: 24px;
-//   }
-//   ${media.belowMobile`
-//     margin-right: -16px;
-//     > div {
-//     margin-right: 16px;
-//   }
-//   `}
-// `
+import AuthorHeader from '../../components/organisms/AuthorHeader'
 
 const MabelPage = ({data}) => {
   console.log(data.allInstaNode)
@@ -34,13 +17,31 @@ const MabelPage = ({data}) => {
     <Page>
       <HelmetHelper
         title="Mabel"
-
         // metaDescription="My gallery of bestselling women’s fiction gives plot out-lines that will satisfy readers looking for romantic, realistic, heart-rending stories about love, loss, family secrets and hope."
       />
+      <AuthorHeader />
       <Container>
-        <div>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: 16,
+          }}
+        >
           {images.map(({node: image}) => (
-            <img x={console.log(image)} key={image.id} src={image.original} />
+            // <div key={image.id}>
+            <img
+              // style={{
+              //   objectFit: 'cover',
+              //   width: '100%',
+              //   height: ' 100%',
+              //   // paddingBottom: '100%',
+              // }}
+              key={image.id}
+              x={console.log(image)}
+              src={image.original}
+            />
+            // </div>
           ))}
         </div>
       </Container>
@@ -54,7 +55,7 @@ MabelPage.propTypes = {
 
 export default MabelPage
 
-export const pageQuery = graphql`
+export const mabelPageQuery = graphql`
   query MabelPageQuery {
     allInstaNode {
       edges {

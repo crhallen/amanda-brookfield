@@ -6,13 +6,9 @@ import Content, {HTMLContent} from '../components/Content'
 import Page from '../components/atoms/Page'
 import Container from '../components/atoms/Container'
 import HelmetHelper from '../components/molecules/HelmetHelper'
-import AuthorNavItem from '../components/molecules/AuthorNavItem'
-import MobileSketchHeading from '../components/molecules/MobileSketchHeading'
-import StyledMarkdown from '../components/atoms/StyledMarkdown'
 
-//TODO make images vary
-import bioImg2x from '../img/bio-desktop@2x.jpg'
-import inspImg2x from '../img/inspiration-desktop@2x.jpg'
+import StyledMarkdown from '../components/atoms/StyledMarkdown'
+import AuthorHeader from '../components/organisms/AuthorHeader'
 
 export const AuthorPageTemplate = ({content, contentComponent}) => {
   const AuthorContent = contentComponent || Content
@@ -23,20 +19,8 @@ export const AuthorPageTemplate = ({content, contentComponent}) => {
         title="Author"
         metaDescription="Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips."
       />
+      <AuthorHeader />
       <Container narrow>
-        <MobileSketchHeading title="Author" sketchType="author" />
-        <div css={'display: flex; margin: 0 -12px;'}>
-          <AuthorNavItem
-            to="/author/inspiration"
-            title="Inspiration"
-            img={inspImg2x}
-          />
-          <AuthorNavItem
-            to="/author/biography"
-            title="Biography"
-            img={bioImg2x}
-          />
-        </div>
         <StyledMarkdown>
           <AuthorContent content={content} />
         </StyledMarkdown>

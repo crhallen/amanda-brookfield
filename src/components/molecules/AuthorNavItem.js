@@ -8,8 +8,8 @@ import {kalamFont} from '../../styles/mixins'
 import theme from '../../styles/theme'
 
 const Background = styled(Link)`
+  flex: 1;
   display: block;
-  flex: 1 0 auto;
   border-radius: 5px;
   height: 150px;
   cursor: pointer;
