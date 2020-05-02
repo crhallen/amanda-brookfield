@@ -4,19 +4,18 @@ import {graphql} from 'gatsby'
 import styled from 'styled-components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
+import {kalamFont} from '../../styles/mixins'
+
 import ExternalLink from '../../components/atoms/ExternalLink'
 import Container from '../../components/atoms/Container'
 import Page from '../../components/atoms/Page'
-
 import HelmetHelper from '../../components/molecules/HelmetHelper'
 import AuthorHeader from '../../components/organisms/AuthorHeader'
 import H2 from '../../components/atoms/H2'
+// import Img from '../../components/PreviewCompatibleImage'
 
-const ImageLink = styled(ExternalLink)`
-  display: block;
-`
-
-const InstaLinkWrapper = styled.div`
+const InstagramCTA = styled.div`
+  ${kalamFont}
   text-align: center;
   margin-bottom: 48px;
   margin-top: 16px;
@@ -24,8 +23,32 @@ const InstaLinkWrapper = styled.div`
     text-decoration: none !important;
   }
   .mabel-insta-icon {
-    margin-top: 8px;
+    margin-top: 4px;
     font-size: 32px;
+  }
+`
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+`
+
+const SquareImageWrapper = styled.div`
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 `
 
@@ -45,44 +68,27 @@ const MabelPage = ({data}) => {
         <H2 margin style={{marginBottom: 0}}>
           Mabel
         </H2>
-        <InstaLinkWrapper>
+        <InstagramCTA>
           <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
-            <div>Find me on Instagram!</div>
+            <div>Find us on Instagram!</div>
             <FontAwesomeIcon
               className="mabel-insta-icon"
               icon={['fab', 'instagram']}
             />
           </ExternalLink>
-        </InstaLinkWrapper>
-        <div
-          style={{
-            // marginTop: 72,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-            gap: 16,
-          }}
-        >
+        </InstagramCTA>
+        <Grid>
           {images.map(({node: image}) => (
-            // <div key={image.id}>
-            <ImageLink
+            <ExternalLink
               href={`https://www.instagram.com/p/${image.id}`}
               key={image.id}
             >
-              <img
-                // style={{
-                //   objectFit: 'cover',
-                //   width: '100%',
-                //   height: ' 100%',
-                //   // paddingBottom: '100%',
-                // }}
-                // key={image.id}
-                x={console.log(image)}
-                src={image.original}
-              />
-            </ImageLink>
-            // </div>
+              <SquareImageWrapper>
+                <img src={image.thumbnails[image.thumbnails.length - 1].src} />
+              </SquareImageWrapper>
+            </ExternalLink>
           ))}
-        </div>
+        </Grid>
       </Container>
     </Page>
   )

@@ -1,12 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
 import {OutboundLink} from 'gatsby-plugin-google-analytics'
 
-const ExternalLink = styled(({href, children}) => (
-  <OutboundLink href={href}>{children}</OutboundLink>
-)).attrs({
-  target: '_blank',
-  rel: 'noopener noreferrer',
-})``
+const ExternalLink = ({
+  href,
+  target = '_blank',
+  rel = 'noopener noreferrer',
+  children,
+}) => (
+  <OutboundLink href={href} target={target} rel={rel}>
+    {children}
+  </OutboundLink>
+)
 
 export default ExternalLink
