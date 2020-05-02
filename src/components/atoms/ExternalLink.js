@@ -6,8 +6,9 @@ const ExternalLink = ({
   target = '_blank',
   rel = 'noopener noreferrer',
   children,
+  className,
 }) => (
-  <OutboundLink href={href} target={target} rel={rel}>
+  <OutboundLink href={href} target={target} rel={rel} className={className}>
     {children}
   </OutboundLink>
 )
