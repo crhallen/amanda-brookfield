@@ -59,12 +59,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-instagram',
-      options: {
-        username: 'amanda_and_mabel_brookfield',
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -80,7 +74,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048, //TODO CHECK THIS
+              maxWidth: 792, //TODO CHECK THIS
               tracedSVG: true,
             },
           },
