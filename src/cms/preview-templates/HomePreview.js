@@ -71,6 +71,7 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
 
   return (
     <HomePageTemplate
+      metaDescription={entry.getIn(['data', 'metaDescription'])}
       bannerImage={getAsset(entry.getIn(['data', 'bannerImage']))}
       welcomeText={entry.getIn(['data', 'welcomeText'])}
       bestSellers={bestSellersArr}

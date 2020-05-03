@@ -1,5 +1,7 @@
 ---
 templateKey: home-page
+metaDescription: >-
+  Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love  of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1
 bannerImage: /img/home-banner.jpg
 welcomeText: >-
   Welcome to my official website. There’s lots to dip into, with sneak-peeks at

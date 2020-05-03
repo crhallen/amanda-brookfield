@@ -33,6 +33,12 @@ collections:
               widget: hidden,
               default: home-page,
             }
+          - {
+              label: Meta Description,
+              name: metaDescription,
+              widget: text,
+              required: false,
+            }
           - {label: Banner Image, name: bannerImage, widget: hidden}
           - {label: Welcome Text, name: welcomeText, widget: text}
           - label: Best Sellers
@@ -231,6 +237,12 @@ collections:
           name: templateKey,
           widget: hidden,
           default: author-page,
+        }
+      - {
+          label: Meta Description,
+          name: metaDescription,
+          widget: text,
+          required: false,
         }
       - {label: Title, name: title, widget: string}
       - {label: Body, name: body, widget: markdown}
