@@ -51,11 +51,22 @@ const SquareImageWrapper = styled.div`
   }
 `
 
-export const MabelPageTemplate = ({title, images, metaDescription}) => {
+export const MabelPageTemplate = ({
+  title,
+  images,
+  metaDescription,
+  inspirationImage,
+  biographyImage,
+  mabelImage,
+}) => {
   return (
     <Page>
       <HelmetHelper title={title} metaDescription={metaDescription} />
-      <AuthorHeader />
+      <AuthorHeader
+        inspirationImage={inspirationImage}
+        biographyImage={biographyImage}
+        mabelImage={mabelImage}
+      />
       <Container>
         <H2 margin style={{marginBottom: 0}}>
           {title}
@@ -96,6 +107,9 @@ const MabelPage = ({data}) => {
   return (
     <MabelPageTemplate
       title={post.frontmatter.title}
+      inspirationImage={post.frontmatter.inspirationImage}
+      biographyImage={post.frontmatter.biographyImage}
+      mabelImage={post.frontmatter.mabelImage}
       images={images}
       metaDescription={post.frontmatter.metaDescription}
     />
@@ -115,6 +129,27 @@ export const mabelPageQuery = graphql`
       frontmatter {
         title
         metaDescription
+        inspirationImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        biographyImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        mabelImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     allInstaNode {

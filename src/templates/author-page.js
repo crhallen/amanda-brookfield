@@ -15,13 +15,20 @@ export const AuthorPageTemplate = ({
   content,
   contentComponent,
   metaDescription,
+  inspirationImage,
+  biographyImage,
+  mabelImage,
 }) => {
   const AuthorContent = contentComponent || Content
 
   return (
     <Page>
       <HelmetHelper title={title} metaDescription={metaDescription} />
-      <AuthorHeader />
+      <AuthorHeader
+        inspirationImage={inspirationImage}
+        biographyImage={biographyImage}
+        mabelImage={mabelImage}
+      />
       {content && (
         <Container narrow>
           <StyledMarkdown>
@@ -45,6 +52,9 @@ const AuthorPage = ({data}) => {
       <AuthorPageTemplate
         title={post.frontmatter.title}
         metaDescription={post.frontmatter.metaDescription}
+        inspirationImage={post.frontmatter.inspirationImage}
+        biographyImage={post.frontmatter.biographyImage}
+        mabelImage={post.frontmatter.mabelImage}
         content={post.html}
         contentComponent={HTMLContent}
       />
@@ -66,6 +76,27 @@ export const authorPageQuery = graphql`
       frontmatter {
         title
         metaDescription
+        inspirationImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        biographyImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        mabelImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

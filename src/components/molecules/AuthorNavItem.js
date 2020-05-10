@@ -2,21 +2,20 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import {Link} from 'gatsby'
 
+import Img from '../PreviewCompatibleImage'
 import H2 from '../atoms/H2'
 import media from '../../styles/mediaQueries'
 import {kalamFont} from '../../styles/mixins'
 import theme from '../../styles/theme'
 
-const Background = styled(Link)`
+const WrapperLink = styled(Link)`
+  position: relative;
   flex: 1;
   display: block;
   border-radius: 5px;
   height: 150px;
   cursor: pointer;
   margin: 12px;
-  background-size: cover;
-  background-position: center;
-  background-image: url(${({img}) => img});
   color: black;
   text-decoration: none;
   &:hover {
@@ -28,18 +27,24 @@ const Background = styled(Link)`
   `}
 `
 
-const Overlay = styled.div`
+const BackgroundImage = styled(Img)`
   height: 100%;
   width: 100%;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  opacity: 0.6;
+  z-index: -1;
+`
+
+const h2mods = css`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.6);
-`
-
-const h2mods = css`
-  margin: 16px 0 8px;
+  height: 100%;
+  margin: 0;
   ${kalamFont};
   color: inherit;
   ${media.belowMobile`
@@ -47,10 +52,9 @@ const h2mods = css`
   `}
 `
 
-const AuthorNavItem = ({title, to, img}) => {
+const AuthorNavItem = ({title, to, imageInfo}) => {
   return (
-    <Background
-      img={img}
+    <WrapperLink
       to={to}
       getProps={({isCurrent}) => {
         return isCurrent
@@ -58,10 +62,9 @@ const AuthorNavItem = ({title, to, img}) => {
           : null
       }}
     >
-      <Overlay>
-        <H2 css={h2mods}>{title}</H2>
-      </Overlay>
-    </Background>
+      <BackgroundImage imageInfo={imageInfo} />
+      <H2 css={h2mods}>{title}</H2>
+    </WrapperLink>
   )
 }
 

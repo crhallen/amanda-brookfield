@@ -2,6 +2,9 @@
 title: Biography
 templateKey: author-page
 metaDescription: ''
+inspirationImage: /img/inspiration.jpg
+biographyImage: /img/biography.jpg
+mabelImage: /img/author-mabel.jpg
 ---
 
 ## Biography
