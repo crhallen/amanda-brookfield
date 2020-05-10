@@ -240,13 +240,13 @@ collections:
               widget: hidden,
               default: author-page,
             }
+          - {label: Title, name: title, widget: string}
           - {
               label: Meta Description,
               name: metaDescription,
               widget: text,
               required: false,
             }
-          - {label: Title, name: title, widget: string}
       - file: src/pages/author/biography.md
         label: Biography
         name: biography
@@ -257,13 +257,13 @@ collections:
               widget: hidden,
               default: author-page,
             }
+          - {label: Title, name: title, widget: string}
           - {
               label: Meta Description,
               name: metaDescription,
               widget: text,
               required: false,
             }
-          - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
       - file: src/pages/author/inspiration.md
         label: Inspiration
@@ -275,13 +275,13 @@ collections:
               widget: hidden,
               default: author-page,
             }
+          - {label: Title, name: title, widget: string}
           - {
               label: Meta Description,
               name: metaDescription,
               widget: text,
               required: false,
             }
-          - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
       - file: src/pages/author/mabel.md
         label: Mabel
