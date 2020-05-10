@@ -24,6 +24,8 @@ CMS.registerPreviewTemplate(
 CMS.registerPreviewTemplate('home', withLayout(HomePreview))
 CMS.registerPreviewTemplate('books', withLayout(BookPreview))
 CMS.registerPreviewTemplate('author', withLayout(AuthorPreview))
+CMS.registerPreviewTemplate('biography', withLayout(AuthorPreview))
+CMS.registerPreviewTemplate('inspiration', withLayout(AuthorPreview))
 CMS.registerPreviewTemplate('mabel', withLayout(MabelPreview))
 CMS.registerPreviewTemplate('blog', withLayout(BlogPostPreview))
 CMS.registerPreviewTemplate('articles', withLayout(ArticlePreview))

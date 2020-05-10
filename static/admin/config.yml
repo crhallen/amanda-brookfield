@@ -229,23 +229,77 @@ collections:
   - name: author
     label: Author
     delete: false
-    folder: src/pages/author
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: author-page,
-        }
-      - {
-          label: Meta Description,
-          name: metaDescription,
-          widget: text,
-          required: false,
-        }
-      - {label: Title, name: title, widget: string}
-      - {label: Body, name: body, widget: markdown}
+    files:
+      - file: src/pages/author/index.md
+        label: Author Home
+        name: author
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: author-page,
+            }
+          - {
+              label: Meta Description,
+              name: metaDescription,
+              widget: text,
+              required: false,
+            }
+          - {label: Title, name: title, widget: string}
+      - file: src/pages/author/biography.md
+        label: Biography
+        name: biography
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: author-page,
+            }
+          - {
+              label: Meta Description,
+              name: metaDescription,
+              widget: text,
+              required: false,
+            }
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - file: src/pages/author/inspiration.md
+        label: Inspiration
+        name: inspiration
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: author-page,
+            }
+          - {
+              label: Meta Description,
+              name: metaDescription,
+              widget: text,
+              required: false,
+            }
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - file: src/pages/author/mabel.md
+        label: Mabel
+        name: mabel
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: mabel-page,
+            }
+          - {
+              label: Meta Description,
+              name: metaDescription,
+              widget: text,
+              required: false,
+            }
+          - {label: Title, name: title, widget: string}
   - name: blog
     label: Blog Posts
     folder: src/pages/blog
