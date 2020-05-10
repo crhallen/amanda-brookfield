@@ -6,9 +6,6 @@ import AuthorNavItem from '../molecules/AuthorNavItem'
 import Container from '../atoms/Container'
 
 const AuthorHeader = ({inspirationImage, biographyImage, mabelImage}) => {
-  console.log('i', inspirationImage)
-  console.log('b', biographyImage)
-  console.log('m', mabelImage)
   return (
     <Container narrow>
       <MobileSketchHeading title="Author" sketchType="author" />
