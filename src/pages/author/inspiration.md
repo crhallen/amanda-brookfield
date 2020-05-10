@@ -1,6 +1,7 @@
 ---
 title: Inspiration
 templateKey: author-page
+metaDescription: ''
 ---
 
 ## Inspiration

@@ -1,6 +1,7 @@
 ---
 title: Biography
 templateKey: author-page
+metaDescription: ''
 ---
 
 ## Biography

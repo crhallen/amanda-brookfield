@@ -10,21 +10,25 @@ import HelmetHelper from '../components/molecules/HelmetHelper'
 import StyledMarkdown from '../components/atoms/StyledMarkdown'
 import AuthorHeader from '../components/organisms/AuthorHeader'
 
-export const AuthorPageTemplate = ({content, contentComponent}) => {
+export const AuthorPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  metaDescription,
+}) => {
   const AuthorContent = contentComponent || Content
 
   return (
     <Page>
-      <HelmetHelper
-        title="Author"
-        metaDescription="Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips."
-      />
+      <HelmetHelper title={title} metaDescription={metaDescription} />
       <AuthorHeader />
-      <Container narrow>
-        <StyledMarkdown>
-          <AuthorContent content={content} />
-        </StyledMarkdown>
-      </Container>
+      {content && (
+        <Container narrow>
+          <StyledMarkdown>
+            <AuthorContent content={content} />
+          </StyledMarkdown>
+        </Container>
+      )}
     </Page>
   )
 }
@@ -34,11 +38,16 @@ AuthorPageTemplate.propTypes = {
 }
 
 const AuthorPage = ({data}) => {
-  const {markdownRemark: post} = data
+  const {markdownRemark: post, frontmatter} = data
 
   return (
     <>
-      <AuthorPageTemplate content={post.html} contentComponent={HTMLContent} />
+      <AuthorPageTemplate
+        title={frontmatter.title}
+        metaDescription={frontmatter.metaDescription}
+        content={post.html}
+        contentComponent={HTMLContent}
+      />
     </>
   )
 }
@@ -56,6 +65,7 @@ export const authorPageQuery = graphql`
       html
       frontmatter {
         title
+        metaDescription
       }
     }
   }

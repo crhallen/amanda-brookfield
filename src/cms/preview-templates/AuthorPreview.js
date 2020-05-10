@@ -5,6 +5,7 @@ import {AuthorPageTemplate} from '../../templates/author-page'
 const AuthorPagePreview = ({entry, widgetFor}) => {
   return (
     <AuthorPageTemplate
+      metaDescription={entry.getIn(['data', 'metaDescription'])}
       title={entry.getIn(['data', 'title'])}
       content={widgetFor('body')}
     />
