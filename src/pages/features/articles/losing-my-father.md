@@ -1,9 +1,7 @@
 ---
 templateKey: article-page
 articleType: article
-path: /articles/losing-my-father
 title: Losing My Father
-description: ''
 ---
 
 In February 1997 I experienced a moment of the purest exultation I have known. I was standing on a Mexican beach at the time, looking out to sea, feeling the ebb of silky warm water pulling and pushing the sand from under my toes. I was thirty-six – healthy, strong, tanned – on a wonderful second honeymoon with my husband. The struggle of early mothering was past, my career was taking shape, every single person I cared for in the world was alive and well. For those few precious seconds time itself seemed to slow to a standstill, much – I decided later – as a rollercoaster pauses at the crest of a steep climb, when all that’s left is the fall.

@@ -1,9 +1,7 @@
 ---
 templateKey: article-page
 articleType: short-story
-path: /short-stories/the-farewell
 title: The Farewell
-description: ''
 ---
 
 The traffic was bad. Of course the traffic was bad – a Friday on the M4 – what had she expected? Louise gripped the steering wheel. Max, tired from his business trip, would be irritated if she was late; no, worse, he would be disappointed. So didn’t you miss me? He would murmur, with enough hurt in his eyes to make her feel really bad.

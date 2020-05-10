@@ -87,11 +87,7 @@ export const HomePageTemplate = ({
 }) => {
   return (
     <Page>
-      <HelmetHelper
-        title="Homepage"
-        metaDescription={metaDescription}
-        // metaDescription="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
-      />
+      <HelmetHelper title="Homepage" metaDescription={metaDescription} />
       <Container>
         <FullWidth>
           <BannerImage

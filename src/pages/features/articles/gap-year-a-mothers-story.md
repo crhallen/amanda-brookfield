@@ -1,9 +1,7 @@
 ---
 templateKey: article-page
 articleType: article
-path: /articles/gap-year-a-mothers-story
 title: Gap Year - A Mother's Story
-description: ''
 ---
 
 ‘So what exactly are you afraid of?’ prompted a longsuffering friend, once my nineteen year old son and his rucksack had departed for South America and I had confessed how the fact of his six foot two frame and burgeoning independence did not stop a small primal part of me feeling as if my beloved, tiny firstborn had been snatched out of my arms. ‘That he will die,’ I replied, shocking myself at the awfulness of this blurting truth.

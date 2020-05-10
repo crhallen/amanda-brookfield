@@ -1,9 +1,7 @@
 ---
 templateKey: article-page
 articleType: article
-path: /articles/under-one-roof
 title: Under One Roof
-description: ''
 ---
 
 During the dark days of early motherhood I sometimes used to console myself that in a mere eighteen years it would all be done with: weaned, potty-trained, educated, my two sons would give us a cheery wave and trot off, as I once had, to busy independent lives, first as students, too hectic for visits home in the holidays, then as working cogs in the wheels of their first jobs, paying rent on some grimy shared flat and generally having a blast…all I had to do was keep the show on the road till then.

@@ -1,9 +1,7 @@
 ---
 templateKey: article-page
 articleType: short-story
-path: /short-stories/the-house-sitter
 title: The House Sitter
-description: ''
 ---
 
 The house was even bigger than Shirley remembered; bigger, grander, more beautiful. There were eight broad stone steps up to the front door. At the top she paused before slipping the key into the lock, turning to enjoy the splendour of the front drive, the wrought iron gates, the sweeping curve of gravel, the circle of carpet green lawn fringed with weeping willows. Inside, her trainers squeaked on the oak parquet. She bounced as she walked, enjoying the sound. Opening the doors on the downstairs rooms, cabinets of glass and ornaments tinkled. Light shimmered across mirrors and expensive paintings.

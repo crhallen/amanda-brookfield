@@ -1,9 +1,7 @@
 ---
 templateKey: article-page
 articleType: short-story
-path: /short-stories/afterlife
 title: Afterlife
-description: ''
 ---
 
 The airport bus lumbered along pot-holed streets lined with flimsy huts and gawping villagers. Judith shrank from the window, glancing warily at her fellow travellers. ‘Sunny Singles Solutions’, the website had said. And yet, here she was in a country clearly on its knees, and part of a group which (with a couple of ropey exceptions) was entirely female.
