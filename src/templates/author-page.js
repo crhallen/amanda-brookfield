@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 
 import Content, {HTMLContent} from '../components/Content'
@@ -41,10 +40,6 @@ export const AuthorPageTemplate = ({
   )
 }
 
-AuthorPageTemplate.propTypes = {
-  events: PropTypes.array.isRequired,
-}
-
 const AuthorPage = ({data}) => {
   const {markdownRemark: post} = data
 
@@ -61,10 +56,6 @@ const AuthorPage = ({data}) => {
       />
     </>
   )
-}
-
-AuthorPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default AuthorPage
