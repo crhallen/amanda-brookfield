@@ -12,11 +12,17 @@ import BlogListItem from '../components/molecules/BlogListItem'
 import ArticleSection from '../components/molecules/ArticleSection'
 import media from '../styles/mediaQueries'
 
-export const ArticlePageTemplate = ({title, content, contentComponent}) => {
+export const ArticlePageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  metaDescription,
+}) => {
   const PostContent = contentComponent || Content
 
   return (
     <Page>
+      <HelmetHelper title={title} metaDescription={metaDescription} />
       <Container narrow>
         <BackButton />
         <H2 css={'margin: 20px 0 48px;'}>{title}</H2>
@@ -57,14 +63,10 @@ const ArticlePage = ({data}) => {
 
   return (
     <>
-      <HelmetHelper
-        title={article.frontmatter.title}
-        metaDescription={article.frontmatter.metaDescription}
-      />
       <ArticlePageTemplate
         content={article.html}
         contentComponent={HTMLContent}
-        description={article.frontmatter.description}
+        metaDescription={article.frontmatter.metaDescription}
         title={article.frontmatter.title}
       />
       <Container
