@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Summer Newsletter 2012
 date: 2012-07-01T17:00:35.000Z
-description:
 tags:
   - facebook
   - newsletters

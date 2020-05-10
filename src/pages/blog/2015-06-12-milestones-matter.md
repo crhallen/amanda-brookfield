@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Milestones Matter
 date: 2015-06-12T15:16:47.000Z
-description:
 tags:
   - newsletters
 ---

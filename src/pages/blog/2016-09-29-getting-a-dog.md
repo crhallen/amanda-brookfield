@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Getting A Dog
 date: 2016-09-29T10:57:24.000Z
-description:
 tags:
   - newsletters
 ---

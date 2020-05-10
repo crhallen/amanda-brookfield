@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Autumn Newsletter 2011
 date: 2011-10-11T19:43:18.000Z
-description:
 tags:
   - newsletters
 ---

@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Everyone has a novel in them... on't they?
 date: 2014-05-09T09:02:09.000Z
-description:
 tags:
   - newsletters
 ---

@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: THE LOVE CHILD
 date: 2013-01-17T16:48:49.000Z
-description:
 tags:
   - newsletters
 ---

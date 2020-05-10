@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Love Matters
 date: 2013-02-14T11:29:53.000Z
-description:
 tags:
   - newsletters
 ---

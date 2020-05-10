@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Spring Newsletter 2012
 date: 2012-04-01T19:40:02.000Z
-description:
 tags:
   - newsletters
 ---

@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Halloween Confession
 date: 2013-10-30T16:26:46.000Z
-description:
 tags:
   - newsletters
 ---

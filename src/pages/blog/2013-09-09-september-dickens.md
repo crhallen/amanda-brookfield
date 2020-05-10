@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: September & Dickens
 date: 2013-09-09T10:21:29.000Z
-description:
 tags:
   - newsletters
 ---

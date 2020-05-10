@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Endings etc
 date: 2014-12-22T18:34:08.000Z
-description:
 tags:
   - newsletters
 ---

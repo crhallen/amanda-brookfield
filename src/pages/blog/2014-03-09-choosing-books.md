@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Choosing Books
 date: 2014-03-09T19:55:13.000Z
-description:
 tags:
   - newsletters
 ---

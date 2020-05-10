@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: The New Year
 date: 2016-01-19T13:08:14.000Z
-description:
 tags:
   - newsletters
 ---

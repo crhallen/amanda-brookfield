@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: 'If you are struggling in the July heat'
 date: 2013-07-16T14:50:11.000Z
-description:
 tags:
   - newsletters
 ---

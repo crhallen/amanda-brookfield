@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: September Blues
 date: 2012-09-14T16:26:07.000Z
-description:
 tags:
   - newsletters
 ---

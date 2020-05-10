@@ -35,7 +35,6 @@ export const ArticlePageTemplate = ({
 ArticlePageTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -117,7 +116,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        description
       }
     }
     allMarkdownRemark(

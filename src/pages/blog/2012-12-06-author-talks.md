@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Author talks
 date: 2012-12-06T12:57:27.000Z
-description:
 tags:
   - newsletters
 ---

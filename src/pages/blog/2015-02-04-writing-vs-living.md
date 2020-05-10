@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Writing vs Living
 date: 2015-02-04T15:28:32.000Z
-description:
 tags:
   - newsletters
 ---

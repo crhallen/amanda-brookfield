@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Creative Frictions
 date: 2014-10-19T16:00:52.000Z
-description:
 tags:
   - newsletters
 ---

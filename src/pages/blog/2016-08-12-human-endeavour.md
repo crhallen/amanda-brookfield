@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Human Endeavour
 date: 2016-08-12T10:38:34.000Z
-description:
 tags:
   - newsletters
 ---

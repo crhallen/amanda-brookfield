@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: My Sixteenth Novel
 date: 2017-04-26T10:47:27.000Z
-description:
 tags:
   - newsletters
 ---

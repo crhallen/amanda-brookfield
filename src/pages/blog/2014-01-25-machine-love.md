@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Machine Love
 date: 2014-01-25T12:14:06.000Z
-description:
 tags:
   - newsletters
 ---

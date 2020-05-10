@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Why I Write
 date: 2015-09-14T09:30:02.000Z
-description:
 tags:
   - newsletters
 ---

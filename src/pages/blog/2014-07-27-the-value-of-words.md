@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: The Value of Words
 date: 2014-07-27T14:21:23.000Z
-description:
 tags:
   - newsletters
 ---

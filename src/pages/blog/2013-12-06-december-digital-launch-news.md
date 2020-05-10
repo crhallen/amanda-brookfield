@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: December Digital LAUNCH News!
 date: 2013-12-06T10:51:21.000Z
-description:
 tags:
   - newsletters
 ---

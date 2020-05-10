@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: December Deliberations
 date: 2012-12-23T18:18:48.000Z
-description:
 tags:
   - newsletters
 ---

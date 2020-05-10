@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: August 3rd - Olympic Note
 date: 2012-08-03T11:22:39.000Z
-description:
 tags:
   - newsletters
 ---

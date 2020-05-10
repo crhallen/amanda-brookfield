@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: One Great (Virtual) Leap Forward
 date: 2013-05-10T11:30:39.000Z
-description:
 tags:
   - newsletters
 ---

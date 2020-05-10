@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: It's not so bad!
 date: 2013-03-25T12:11:19.000Z
-description:
 tags:
   - newsletters
 ---

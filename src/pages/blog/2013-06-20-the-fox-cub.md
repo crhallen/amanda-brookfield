@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: The Fox Cub
 date: 2013-06-20T13:59:39.000Z
-description:
 tags:
   - newsletters
 ---
