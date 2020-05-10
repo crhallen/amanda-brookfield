@@ -32,6 +32,7 @@ export const AuthorPageTemplate = ({
       {content && (
         <Container narrow>
           <StyledMarkdown>
+            <h2>{title}</h2>
             <AuthorContent content={content} />
           </StyledMarkdown>
         </Container>

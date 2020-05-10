@@ -7,8 +7,6 @@ biographyImage: /img/biography.jpg
 mabelImage: /img/author-mabel.jpg
 ---
 
-## Inspiration
-
 ### Where Do I Get My Ideas From?
 
 Inspiration is a tricky, hard-to-pin-down business. It is also, by definition, deeply private and - at times - extraordinarily mysterious.
