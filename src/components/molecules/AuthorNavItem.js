@@ -36,6 +36,7 @@ const BackgroundImage = styled(Img)`
   border-radius: 5px;
   opacity: 0.6;
   z-index: -1;
+  object-fit: cover;
 `
 
 const h2mods = css`

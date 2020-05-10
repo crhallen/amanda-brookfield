@@ -240,6 +240,9 @@ collections:
               widget: hidden,
               default: author-page,
             }
+          - {label: Inspiration Image, name: inspirationImage, widget: hidden}
+          - {label: Biography Image, name: biographyImage, widget: hidden}
+          - {label: Mabel Image, name: mabelImage, widget: hidden}
           - {label: Title, name: title, widget: string}
           - {
               label: Meta Description,
@@ -257,6 +260,9 @@ collections:
               widget: hidden,
               default: author-page,
             }
+          - {label: Inspiration Image, name: inspirationImage, widget: hidden}
+          - {label: Biography Image, name: biographyImage, widget: hidden}
+          - {label: Mabel Image, name: mabelImage, widget: hidden}
           - {label: Title, name: title, widget: string}
           - {
               label: Meta Description,
@@ -275,6 +281,9 @@ collections:
               widget: hidden,
               default: author-page,
             }
+          - {label: Inspiration Image, name: inspirationImage, widget: hidden}
+          - {label: Biography Image, name: biographyImage, widget: hidden}
+          - {label: Mabel Image, name: mabelImage, widget: hidden}
           - {label: Title, name: title, widget: string}
           - {
               label: Meta Description,
@@ -299,6 +308,9 @@ collections:
               widget: text,
               required: false,
             }
+          - {label: Inspiration Image, name: inspirationImage, widget: hidden}
+          - {label: Biography Image, name: biographyImage, widget: hidden}
+          - {label: Mabel Image, name: mabelImage, widget: hidden}
           - {label: Title, name: title, widget: string}
   - name: blog
     label: Blog Posts
