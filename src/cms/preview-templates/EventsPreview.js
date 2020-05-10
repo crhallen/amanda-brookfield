@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {EventsPageTemplate} from '../../templates/events-page'
 
 const BookPreview = ({widgetsFor}) => {
@@ -20,13 +19,6 @@ const BookPreview = ({widgetsFor}) => {
       )}
     />
   )
-}
-
-BookPreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
 }
 
 export default BookPreview

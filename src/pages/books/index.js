@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {graphql} from 'gatsby'
 
@@ -54,10 +53,6 @@ const BooksPage = ({data}) => {
       </Container>
     </Page>
   )
-}
-
-BooksPage.propTypes = {
-  data: PropTypes.shape({}),
 }
 
 export default BooksPage

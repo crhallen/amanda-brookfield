@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -114,10 +113,6 @@ const MabelPage = ({data}) => {
       metaDescription={post.frontmatter.metaDescription}
     />
   )
-}
-
-MabelPage.propTypes = {
-  data: PropTypes.shape({}),
 }
 
 export default MabelPage

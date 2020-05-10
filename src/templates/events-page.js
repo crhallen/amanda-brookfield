@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 
@@ -48,18 +47,10 @@ export const EventsPageTemplate = ({events}) => {
   )
 }
 
-EventsPageTemplate.propTypes = {
-  events: PropTypes.array.isRequired,
-}
-
 const EventsPage = ({data}) => {
   const {markdownRemark: post} = data
 
   return <EventsPageTemplate events={post.frontmatter.events} />
-}
-
-EventsPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default EventsPage

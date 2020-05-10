@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {AnnouncementTemplate} from '../../components/molecules/Announcement'
 
 const AnnouncementPreview = ({entry, widgetFor, getAsset}) => {
@@ -13,13 +12,6 @@ const AnnouncementPreview = ({entry, widgetFor, getAsset}) => {
       image={getAsset(entry.getIn(['data', 'image']))} //NB: the prop is not passed this way in the real application
     />
   )
-}
-
-AnnouncementPreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
 }
 
 export default AnnouncementPreview

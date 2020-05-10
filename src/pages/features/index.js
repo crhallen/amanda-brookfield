@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 
 import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
@@ -41,10 +40,6 @@ const FeaturesPage = ({data}) => {
       </Container>
     </Page>
   )
-}
-
-FeaturesPage.propTypes = {
-  data: PropTypes.shape({}),
 }
 
 export default FeaturesPage

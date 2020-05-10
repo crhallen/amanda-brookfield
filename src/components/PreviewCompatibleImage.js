@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
 const ImgFluidOrFixed = ({style, childImageSharp, alt, className}) => {
@@ -69,15 +68,6 @@ const PreviewCompatibleImage = ({imageInfo, style, className}) => {
   }
 
   return null
-}
-
-PreviewCompatibleImage.propTypes = {
-  imageInfo: PropTypes.shape({
-    alt: PropTypes.string,
-    childImageSharp: PropTypes.object,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    style: PropTypes.object,
-  }),
 }
 
 export default PreviewCompatibleImage

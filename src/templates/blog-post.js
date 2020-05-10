@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import {graphql} from 'gatsby'
 import Content, {HTMLContent} from '../components/Content'
@@ -24,12 +23,6 @@ export const BlogPostTemplate = ({title, content, contentComponent}) => {
   )
 }
 
-BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  title: PropTypes.string,
-}
-
 const BlogPost = ({data}) => {
   const {markdownRemark: post} = data
 
@@ -40,12 +33,6 @@ const BlogPost = ({data}) => {
       title={post.frontmatter.title}
     />
   )
-}
-
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
 }
 
 export default BlogPost

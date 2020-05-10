@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 
@@ -45,9 +44,7 @@ const BlogIndexPage = ({data, selectedYear}) => {
                 to={post.fields.slug}
                 title={post.frontmatter.title}
                 excerpt={post.excerpt}
-                metaText={`${post.frontmatter.date} |  ${
-                  post.timeToRead
-                } min read`}
+                metaText={`${post.frontmatter.date} |  ${post.timeToRead} min read`}
               />
             ))}
           </div>
@@ -57,13 +54,6 @@ const BlogIndexPage = ({data, selectedYear}) => {
   )
 }
 
-BlogIndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
 export default BlogIndexPage
 
 export const pageQuery = graphql`

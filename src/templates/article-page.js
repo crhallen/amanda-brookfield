@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 
 import HelmetHelper from '../components/molecules/HelmetHelper'
@@ -30,13 +29,6 @@ export const ArticlePageTemplate = ({
       </Container>
     </Page>
   )
-}
-
-ArticlePageTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
 }
 
 function shuffleArray(array) {
@@ -99,12 +91,6 @@ const ArticlePage = ({data}) => {
       </Container>
     </>
   )
-}
-
-ArticlePage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
 }
 
 export default ArticlePage

@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 import Img from '../components/PreviewCompatibleImage'
@@ -123,10 +122,6 @@ const BookPage = ({data}) => {
       />
     </>
   )
-}
-
-BookPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default BookPage

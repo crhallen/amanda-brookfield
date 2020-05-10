@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {AuthorPageTemplate} from '../../templates/author-page'
 
 const AuthorPagePreview = ({entry, widgetFor, getAsset}) => {
@@ -21,13 +20,6 @@ const AuthorPagePreview = ({entry, widgetFor, getAsset}) => {
       content={content}
     />
   )
-}
-
-AuthorPagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
 }
 
 export default AuthorPagePreview

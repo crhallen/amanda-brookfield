@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 import {BookPageTemplate} from '../../templates/book-page'
 
 const BookPreview = ({entry, getAsset, widgetFor, widgetsFor}) => (
@@ -13,14 +13,5 @@ const BookPreview = ({entry, getAsset, widgetFor, widgetsFor}) => (
     coverSketchImage={getAsset(entry.getIn(['data', 'coverSketchImage']))}
   />
 )
-
-BookPreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  getAsset: PropTypes.func,
-  widgetFor: PropTypes.func,
-  widgetsFor: PropTypes.func,
-}
 
 export default BookPreview

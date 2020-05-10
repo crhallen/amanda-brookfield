@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import ButtonBase from './ButtonBase'
@@ -100,9 +99,4 @@ SketchButtonComponent.defaultProps = {
   styleType: 'primary',
   uppercase: false,
   size: 'md',
-}
-SketchButtonComponent.propTypes = {
-  styleType: PropTypes.oneOf(['primary', 'outline', 'orange', 'blue']),
-  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
-  uppercase: PropTypes.bool,
 }
