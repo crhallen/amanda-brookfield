@@ -4,15 +4,15 @@ import {graphql} from 'gatsby'
 import styled from 'styled-components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-import {kalamFont} from '../../styles/mixins'
+import {kalamFont} from '../styles/mixins'
 
-import ExternalLink from '../../components/atoms/ExternalLink'
-import Container from '../../components/atoms/Container'
-import Page from '../../components/atoms/Page'
-import HelmetHelper from '../../components/molecules/HelmetHelper'
-import AuthorHeader from '../../components/organisms/AuthorHeader'
-import H2 from '../../components/atoms/H2'
-import Img from '../../components/PreviewCompatibleImage'
+import ExternalLink from '../components/atoms/ExternalLink'
+import Container from '../components/atoms/Container'
+import Page from '../components/atoms/Page'
+import HelmetHelper from '../components/molecules/HelmetHelper'
+import AuthorHeader from '../components/organisms/AuthorHeader'
+import H2 from '../components/atoms/H2'
+import Img from '../components/PreviewCompatibleImage'
 
 const InstagramCTA = styled.div`
   ${kalamFont}
@@ -51,21 +51,14 @@ const SquareImageWrapper = styled.div`
   }
 `
 
-const MabelPage = ({data}) => {
-  console.log(data.allInstaNode)
-  const {
-    allInstaNode: {edges: images},
-  } = data
+export const MabelPageTemplate = ({title, images, metaDescription}) => {
   return (
     <Page>
-      <HelmetHelper
-        title="Mabel"
-        // metaDescription="My gallery of bestselling women’s fiction gives plot out-lines that will satisfy readers looking for romantic, realistic, heart-rending stories about love, loss, family secrets and hope."
-      />
+      <HelmetHelper title={title} metaDescription={metaDescription} />
       <AuthorHeader />
       <Container>
         <H2 margin style={{marginBottom: 0}}>
-          Mabel
+          {title}
         </H2>
         <InstagramCTA>
           <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
@@ -77,19 +70,35 @@ const MabelPage = ({data}) => {
           </ExternalLink>
         </InstagramCTA>
         <Grid>
-          {images.map(({node: image}) => (
-            <ExternalLink
-              href={`https://www.instagram.com/p/${image.id}`}
-              key={image.id}
-            >
-              <SquareImageWrapper>
-                <Img imageInfo={image.localFile} />
-              </SquareImageWrapper>
-            </ExternalLink>
-          ))}
+          {Array.isArray(images) &&
+            images.map(({node: image}) => (
+              <ExternalLink
+                href={`https://www.instagram.com/p/${image.id}`}
+                key={image.id}
+              >
+                <SquareImageWrapper>
+                  <Img imageInfo={image.localFile} />
+                </SquareImageWrapper>
+              </ExternalLink>
+            ))}
         </Grid>
       </Container>
     </Page>
+  )
+}
+
+const MabelPage = ({data}) => {
+  const {
+    markdownRemark: post,
+    allInstaNode: {edges: images},
+  } = data
+
+  return (
+    <MabelPageTemplate
+      title={post.frontmatter.title}
+      images={images}
+      metaDescription={post.frontmatter.metaDescription}
+    />
   )
 }
 
@@ -100,7 +109,14 @@ MabelPage.propTypes = {
 export default MabelPage
 
 export const mabelPageQuery = graphql`
-  query MabelPageQuery {
+  query MabelPageQuery($id: String!) {
+    markdownRemark(id: {eq: $id}) {
+      id
+      frontmatter {
+        title
+        metaDescription
+      }
+    }
     allInstaNode {
       edges {
         node {

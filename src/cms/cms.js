@@ -6,6 +6,7 @@ import AnnouncementPreview from './preview-templates/AnnouncementPreview'
 import HomePreview from './preview-templates/HomePreview'
 import BookPreview from './preview-templates/BookPreview'
 import AuthorPreview from './preview-templates/AuthorPreview'
+import MabelPreview from './preview-templates/MabelPreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ArticlePreview from './preview-templates/ArticlePreview'
 import EventsPreview from './preview-templates/EventsPreview'
@@ -23,6 +24,7 @@ CMS.registerPreviewTemplate(
 CMS.registerPreviewTemplate('home', withLayout(HomePreview))
 CMS.registerPreviewTemplate('books', withLayout(BookPreview))
 CMS.registerPreviewTemplate('author', withLayout(AuthorPreview))
+CMS.registerPreviewTemplate('mabel', withLayout(MabelPreview))
 CMS.registerPreviewTemplate('blog', withLayout(BlogPostPreview))
 CMS.registerPreviewTemplate('articles', withLayout(ArticlePreview))
 CMS.registerPreviewTemplate('short-stories', withLayout(ArticlePreview))
