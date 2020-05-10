@@ -323,6 +323,12 @@ collections:
         }
       - {label: Title, name: title, widget: string}
       - {
+          label: Meta Description,
+          name: metaDescription,
+          widget: text,
+          required: false,
+        }
+      - {
           label: Original Publication Date,
           name: date,
           widget: datetime,
@@ -345,6 +351,12 @@ collections:
               name: templateKey,
               widget: hidden,
               default: events-page,
+            }
+          - {
+              label: Meta Description,
+              name: metaDescription,
+              widget: text,
+              required: false,
             }
           - {
               label: Events,
