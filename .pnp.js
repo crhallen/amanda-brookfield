@@ -186,10 +186,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.0.5"
       ],
       [
-        "prop-types",
-        "npm:15.7.2"
-      ],
-      [
         "react",
         "npm:16.13.1"
       ],
@@ -276,7 +272,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["netlify-lambda", "npm:1.6.3"],
             ["parcel-bundler", "npm:1.12.4"],
             ["prettier", "npm:2.0.5"],
-            ["prop-types", "npm:15.7.2"],
             ["react", "npm:16.13.1"],
             ["react-dom", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:16.13.1"],
             ["react-helmet", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.0.0"],
@@ -4916,7 +4911,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["netlify-lambda", "npm:1.6.3"],
             ["parcel-bundler", "npm:1.12.4"],
             ["prettier", "npm:2.0.5"],
-            ["prop-types", "npm:15.7.2"],
             ["react", "npm:16.13.1"],
             ["react-dom", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:16.13.1"],
             ["react-helmet", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.0.0"],
