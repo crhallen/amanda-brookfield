@@ -202,22 +202,19 @@ const Announcement = () => {
   const [isExpired, setExpired] = useState(false)
 
   const close = () => {
-    sessionStorage.setItem('announcementClosed', 'true')
+    localStorage.setItem('announcementClosed', 'true')
     setClosed(true)
   }
 
   useEffect(() => {
     const announcementString = JSON.stringify(announcement)
-    const existingAnnouncement = sessionStorage.getItem('announcement')
+    const existingAnnouncement = localStorage.getItem('announcement')
     const isNewAnnouncement = announcementString !== existingAnnouncement
-    sessionStorage.setItem('announcement', announcementString)
+    localStorage.setItem('announcement', announcementString)
     if (isNewAnnouncement) {
-      sessionStorage.setItem('announcementClosed', 'false')
+      localStorage.setItem('announcementClosed', 'false')
     }
-    if (
-      isNewAnnouncement ||
-      sessionStorage.getItem('announcementClosed') === 'false'
-    ) {
+    if (localStorage.getItem('announcementClosed') === 'false') {
       setClosed(false)
     }
   }, [])
