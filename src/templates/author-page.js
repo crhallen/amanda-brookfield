@@ -38,13 +38,13 @@ AuthorPageTemplate.propTypes = {
 }
 
 const AuthorPage = ({data}) => {
-  const {markdownRemark: post, frontmatter} = data
+  const {markdownRemark: post} = data
 
   return (
     <>
       <AuthorPageTemplate
-        title={frontmatter.title}
-        metaDescription={frontmatter.metaDescription}
+        title={post.frontmatter.title}
+        metaDescription={post.frontmatter.metaDescription}
         content={post.html}
         contentComponent={HTMLContent}
       />
