@@ -115,5 +115,23 @@ exports.onCreateNode = ({node, actions, getNode}) => {
   }
 }
 
-// Alternative approach for querying all the required data on the homepage:
-// https://stackoverflow.com/questions/49456106/how-to-make-a-one-to-many-connection-between-netlify-cms-and-gatsby
+exports.createSchemaCustomization = ({actions}) => {
+  const {createTypes} = actions
+  // we need this in order to be able to support an empty list of events
+  createTypes(`
+    type Event {
+      title: String!
+      date: Date!
+      time: String
+      description: String
+    }
+
+    type Frontmatter {
+      events: [Event!]
+    }
+
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+  `)
+}
