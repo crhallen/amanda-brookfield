@@ -52,7 +52,7 @@ const SquareImageWrapper = styled.div`
 
 export const MabelPageTemplate = ({
   title,
-  instagramImages,
+  instagramImages = [],
   metaDescription,
   inspirationImage,
   biographyImage,
@@ -97,7 +97,7 @@ export const MabelPageTemplate = ({
               key={image.id}
             >
               <SquareImageWrapper>
-                <Img imageInfo={image.localFile} />
+                <Img style={{objectFit: 'cover'}} imageInfo={image.localFile} />
               </SquareImageWrapper>
             </ExternalLink>
           ))}
