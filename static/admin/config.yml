@@ -312,6 +312,9 @@ collections:
           - {label: Biography Image, name: biographyImage, widget: hidden}
           - {label: Mabel Image, name: mabelImage, widget: hidden}
           - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Preset Image 1, name: presetGalleryImage1, widget: hidden}
+          - {label: Preset Image 2, name: presetGalleryImage2, widget: hidden}
   - name: blog
     label: Blog Posts
     folder: src/pages/blog

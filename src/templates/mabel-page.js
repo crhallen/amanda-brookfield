@@ -52,12 +52,23 @@ const SquareImageWrapper = styled.div`
 
 export const MabelPageTemplate = ({
   title,
-  images,
+  instagramImages,
   metaDescription,
   inspirationImage,
   biographyImage,
   mabelImage,
+  presetGalleryImage1,
+  presetGalleryImage2,
 }) => {
+  const images = [
+    {id: presetGalleryImage1.id, localFile: presetGalleryImage1.path},
+    {id: presetGalleryImage2.id, localFile: presetGalleryImage2.path},
+    ...instagramImages
+      .map(({node}) => node)
+      .sort((a, b) => b.timestamp - a.timestamp)
+      .slice(0, 10),
+  ]
+
   return (
     <Page>
       <HelmetHelper title={title} metaDescription={metaDescription} />
@@ -80,17 +91,16 @@ export const MabelPageTemplate = ({
           </ExternalLink>
         </InstagramCTA>
         <Grid>
-          {Array.isArray(images) &&
-            images.map(({node: image}) => (
-              <ExternalLink
-                href={`https://www.instagram.com/p/${image.id}`}
-                key={image.id}
-              >
-                <SquareImageWrapper>
-                  <Img imageInfo={image.localFile} />
-                </SquareImageWrapper>
-              </ExternalLink>
-            ))}
+          {images.map(image => (
+            <ExternalLink
+              href={`https://www.instagram.com/p/${image.id}`}
+              key={image.id}
+            >
+              <SquareImageWrapper>
+                <Img imageInfo={image.localFile} />
+              </SquareImageWrapper>
+            </ExternalLink>
+          ))}
         </Grid>
       </Container>
     </Page>
@@ -100,7 +110,7 @@ export const MabelPageTemplate = ({
 const MabelPage = ({data}) => {
   const {
     markdownRemark: post,
-    allInstaNode: {edges: images},
+    allInstaNode: {edges: instagramImages},
   } = data
 
   return (
@@ -109,8 +119,10 @@ const MabelPage = ({data}) => {
       inspirationImage={post.frontmatter.inspirationImage}
       biographyImage={post.frontmatter.biographyImage}
       mabelImage={post.frontmatter.mabelImage}
-      images={images}
+      instagramImages={instagramImages}
       metaDescription={post.frontmatter.metaDescription}
+      presetGalleryImage1={post.frontmatter.presetGalleryImage1}
+      presetGalleryImage2={post.frontmatter.presetGalleryImage2}
     />
   )
 }
@@ -142,6 +154,26 @@ export const mabelPageQuery = graphql`
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        presetGalleryImage1 {
+          id
+          path {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        presetGalleryImage2 {
+          id
+          path {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
             }
           }
         }
