@@ -57,9 +57,9 @@ const Description = styled.div`
 
 export const MabelPageTemplate = ({
   title,
+  metaDescription,
   description,
   instagramImages = [],
-  metaDescription,
   inspirationImage,
   biographyImage,
   mabelImage,
@@ -132,11 +132,12 @@ const MabelPage = ({data}) => {
   return (
     <MabelPageTemplate
       title={post.frontmatter.title}
+      metaDescription={post.frontmatter.metaDescription}
+      description={post.frontmatter.description}
       inspirationImage={post.frontmatter.inspirationImage}
       biographyImage={post.frontmatter.biographyImage}
       mabelImage={post.frontmatter.mabelImage}
       instagramImages={instagramImages}
-      metaDescription={post.frontmatter.metaDescription}
       presetGalleryImage1={post.frontmatter.presetGalleryImage1}
       presetGalleryImage2={post.frontmatter.presetGalleryImage2}
     />
@@ -152,6 +153,7 @@ export const mabelPageQuery = graphql`
       frontmatter {
         title
         metaDescription
+        description
         inspirationImage {
           childImageSharp {
             fluid {

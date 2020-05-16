@@ -19,10 +19,10 @@ const MabelPreview = ({entry, getAsset}) => {
     <MabelPageTemplate
       title={entry.getIn(['data', 'title'])}
       metaDescription={entry.getIn(['data', 'metaDescription'])}
+      description={entry.getIn(['data', 'description'])}
       inspirationImage={getAsset(entry.getIn(['data', 'inspirationImage']))}
       biographyImage={getAsset(entry.getIn(['data', 'biographyImage']))}
       mabelImage={getAsset(entry.getIn(['data', 'mabelImage']))}
-      description={entry.getIn(['data', 'description'])}
       presetGalleryImage1={presetGalleryImage1}
       presetGalleryImage2={presetGalleryImage2}
       instagramImages={new Array(12)
