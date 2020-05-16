@@ -22,6 +22,7 @@ const MabelPreview = ({entry, getAsset}) => {
       inspirationImage={getAsset(entry.getIn(['data', 'inspirationImage']))}
       biographyImage={getAsset(entry.getIn(['data', 'biographyImage']))}
       mabelImage={getAsset(entry.getIn(['data', 'mabelImage']))}
+      description={entry.getIn(['data', 'description'])}
       presetGalleryImage1={presetGalleryImage1}
       presetGalleryImage2={presetGalleryImage2}
       instagramImages={new Array(12)

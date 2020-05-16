@@ -16,8 +16,6 @@ import Img from '../components/PreviewCompatibleImage'
 const InstagramCTA = styled.div`
   ${kalamFont}
   text-align: center;
-  margin-bottom: 48px;
-  margin-top: 16px;
   a {
     text-decoration: none !important;
   }
@@ -31,6 +29,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
+  margin: 48px 0;
 `
 
 const SquareImageWrapper = styled.div`
@@ -50,8 +49,15 @@ const SquareImageWrapper = styled.div`
   }
 `
 
+const Description = styled.div`
+  margin: 12px auto 32px;
+  text-align: center;
+  max-width: 400px;
+`
+
 export const MabelPageTemplate = ({
   title,
+  description,
   instagramImages = [],
   metaDescription,
   inspirationImage,
@@ -81,6 +87,7 @@ export const MabelPageTemplate = ({
         <H2 margin style={{marginBottom: 0}}>
           {title}
         </H2>
+        <Description>{description}</Description>
         <InstagramCTA>
           <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
             <div>Find us on Instagram!</div>
@@ -102,6 +109,15 @@ export const MabelPageTemplate = ({
             </ExternalLink>
           ))}
         </Grid>
+        <InstagramCTA>
+          <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
+            <div>See more on Instagram</div>
+            <FontAwesomeIcon
+              className="mabel-insta-icon"
+              icon={['fab', 'instagram']}
+            />
+          </ExternalLink>
+        </InstagramCTA>
       </Container>
     </Page>
   )

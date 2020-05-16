@@ -5,6 +5,7 @@ metaDescription: ''
 inspirationImage: /img/inspiration.jpg
 biographyImage: /img/biography.jpg
 mabelImage: /img/author-mabel.jpg
+description: Star of my bestselling memoir, 'For the Love of a Dog'
 presetGalleryImage1:
   id: Bxrl4QChHhi
   path: /img/ftload-preview.png
