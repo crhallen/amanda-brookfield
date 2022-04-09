@@ -11,7 +11,7 @@
   "dependencies": {
     "html-to-markdown": "^1.0.0",
     "just-kebab-case": "^1.0.0",
-    "moment": "^2.22.1",
+    "moment": "^2.29.2",
     "xml2js": "^0.4.19"
   }
 }
